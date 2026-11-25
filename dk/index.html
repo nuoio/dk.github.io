@@ -1,0 +1,3809 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#5946ce"><meta name="description" content="165道学习题库背诵自测，答题即时反馈，自动保存进度，集中复习错题。"><title>背诵自测 · 本地版</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%235946ce%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2742%27 text-anchor=%27middle%27 fill=%27white%27%3E记%3C/text%3E%3C/svg%3E"><style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#26243e;background:#f5f6fb;font-size:16px;--purple:#5946ce;--muted:#77758b;--border:#e9e8f1;--green:#167649}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #a298ef;outline-offset:4px}button{transition:background .15s,color .15s,border-color .15s}a{color:inherit}.sidebar{position:fixed;inset:0 auto 0 0;width:250px;background:#fff;border-right:1px solid var(--border);padding:35px 24px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:700;text-decoration:none}.logo{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:var(--purple);color:#fff;font-size:23px}.brand small{display:block;font-size:12px;letter-spacing:1px;font-weight:400;color:var(--muted);margin-top:6px}.nav-label{font-size:13px;color:var(--muted);margin:48px 12px 15px}nav{display:grid;gap:8px}nav button{border:0;background:none;border-radius:11px;padding:14px 13px;display:flex;justify-content:space-between;align-items:center;color:#69667d;font-size:15px}nav button.active{background:#eeeafd;color:#5140bd;font-weight:600}nav button:hover{background:#f5f3ff}nav b{font-size:13px;font-weight:500;color:inherit}.side-note{margin-top:auto;background:#f6f5fd;border-radius:14px;padding:20px 16px}.note-icon{color:var(--purple);display:block;margin-bottom:12px;font-size:25px}.side-note strong{font-size:15px}.side-note p{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:0}.text-button{border:0;background:none;color:#77708f;font-size:13px;padding:9px 0;text-decoration:underline;text-underline-offset:3px}.sidebar>.text-button{text-align:left;margin:20px 0 0}.storage-note{font-size:12px;line-height:1.6;color:#9691a6;margin:6px 0 0}main{margin-left:250px;max-width:1370px;padding:42px 54px 20px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}.eyebrow{font-size:12px;letter-spacing:1.7px;color:var(--purple);font-weight:600;margin:0 0 12px}h1{font-size:31px;letter-spacing:-.5px;margin:0;font-weight:700}.intro{font-size:14px;color:var(--muted);margin:13px 0 0}.sound{border:1px solid #e0ddea;background:#fff;color:#6e6882;padding:9px 13px;border-radius:9px;font-size:13px;white-space:nowrap}.sound[aria-pressed=true]{color:var(--purple);background:#eeebff}.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:28px;padding:23px 0;background:white;border:1px solid var(--border);border-radius:16px}.stats>div{padding:0 25px;border-right:1px solid var(--border)}.stats>div:last-child{border:0}.stats span{font-size:28px;font-weight:700;letter-spacing:-.5px}.stats>div:nth-child(2) span{color:var(--green)}.stats>div:nth-child(3) span{color:#c57d35}.stats p{font-size:12px;color:var(--muted);margin:8px 0 0}.stats small{font-size:12px;color:#aaa5b6}.stats .stat-progress span{font-size:24px}.track{height:5px;background:#edebf7;border-radius:10px;overflow:hidden;margin-top:10px}.track i{height:100%;display:block;background:var(--purple);width:0;border-radius:10px;transition:width .3s}.workspace{border:1px solid var(--border);background:#fff;border-radius:17px;overflow:hidden}.toolbar{border-bottom:1px solid var(--border);padding:16px 25px;display:flex;align-items:center;justify-content:space-between;gap:15px}.tabs{display:flex;gap:5px}.tabs button{background:transparent;border:0;padding:9px 12px;color:var(--muted);font-size:14px;border-radius:8px;white-space:nowrap}.tabs button.active{background:#f0edfc;color:var(--purple);font-weight:600}.tabs span{display:inline-block;margin-left:4px;font-size:12px}.shuffle{display:flex;gap:7px;align-items:center;color:var(--muted);font-size:13px;white-space:nowrap}.shuffle input{accent-color:var(--purple);width:16px;height:16px}.quiz{padding:28px 34px 24px}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:17px}.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;background:#eeeafa;color:var(--purple);font-size:12px;border-radius:6px}.pill.extra{background:#fff2da;color:#987019;margin-left:7px}.counter{font-size:13px;color:#9791a7}.counter b{color:#49435e;font-size:18px;font-weight:600}.session-track{margin-bottom:27px}.question{font-size:21px;line-height:1.85;font-weight:600;margin:0 0 12px;overflow-wrap:anywhere}.helper{color:#9690a2;font-size:13px;margin:0 0 22px}.options{display:grid;gap:11px;margin-bottom:22px}.option{width:100%;text-align:left;border:1px solid #e6e3ee;background:white;border-radius:11px;padding:15px 18px;display:flex;align-items:flex-start;gap:14px;color:#514b63;font-size:16px;line-height:1.65}.option:hover:not(:disabled){border-color:#a99ae8;background:#faf9ff}.option .letter{flex-shrink:0;display:grid;place-items:center;width:29px;height:29px;border:1px solid #e4e0ec;border-radius:7px;font-size:14px;color:#82798f;line-height:1}.option.selected{border-color:var(--purple);background:#f4f1ff;color:var(--purple)}.option.selected .letter{background:var(--purple);color:#fff;border-color:var(--purple)}.option.correct{border-color:#83c4a1;background:#f0faf4;color:#17613c}.option.correct .letter{background:#208454;border-color:#208454;color:#fff}.option.incorrect{border-color:#e3a49c;background:#fff4f2;color:#a33e33}.option.incorrect .letter{background:#b44e43;border-color:#b44e43;color:#fff}.option .mark{margin-left:auto;flex-shrink:0;font-weight:bold}.fill-fields{display:grid;gap:14px;margin:24px 0}.fill-fields label{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:12px}.fill-fields input{flex:1;min-width:0;width:100%;border:1px solid #dcd6ea;border-radius:9px;padding:14px 15px;font-size:17px;color:#3a3150;background:#fff}.fill-fields input:disabled{background:#f5f4f8;color:#50495e}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.primary,.secondary{border:1px solid transparent;padding:12px 22px;border-radius:9px;font-size:14px;font-weight:500}.primary{background:var(--purple);color:white}.primary:hover{background:#4736b6}.primary:disabled{background:#d5d0e9;color:#fff}.secondary{background:white;border-color:#dfdbe9;color:#71677e}.secondary:hover{background:#f6f4fc}.feedback{border-radius:12px;padding:18px 20px;margin:22px 0 0;background:#eff8f3;color:#1b6b43;line-height:1.7}.feedback.bad{background:#fff4ee;color:#a1522a}.feedback.peek{background:#f3f0fb;color:#67508b}.feedback h3{margin:0;font-size:17px}.feedback p{font-size:14px;margin:7px 0 0}.feedback .answer{font-weight:600}.source-note{font-size:13px;color:#9a7023;background:#fff8e9;padding:12px 15px;border-radius:9px;line-height:1.8;margin:15px 0}.quiz-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid var(--border)}.quiz-footer button{font-size:13px}.quiz-footer .secondary:disabled{opacity:.35}.keys{font-size:12px;color:#aaa2b3}.palette{margin-top:23px;border-top:1px solid var(--border);padding-top:17px}.palette summary{color:#887e97;font-size:13px;cursor:pointer}.dots{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.dots button{width:33px;height:33px;border-radius:6px;background:#f5f3fa;border:1px solid transparent;color:#80768f;font-size:12px}.dots .done{background:#e5f3eb;color:#237949}.dots .missed{background:#fff0e6;color:#b16a32}.dots .current{border-color:var(--purple);font-weight:bold}.bottom-note{display:flex;justify-content:center;gap:28px;color:#a29aaa;font-size:12px;margin:20px 0 30px}footer{display:flex;justify-content:space-between;align-items:center;color:#aaa3b4;font-size:12px;gap:20px;line-height:1.7}.empty{text-align:center;padding:40px 10px}.empty .big-icon{font-size:43px;color:var(--purple)}.empty h2{font-size:24px;margin:18px 0 10px}.empty p{font-size:14px;color:var(--muted);line-height:1.9}.empty .actions{justify-content:center;margin-top:22px}.summary-numbers{font-size:38px;font-weight:700;color:var(--purple);margin:24px 0}.reset-bar{padding:16px;background:#fff3ed;border-radius:10px;font-size:14px;line-height:1.7;margin-top:20px}.reset-bar button{margin-top:10px;margin-right:10px}dialog{border:0;border-radius:20px;max-width:570px;width:calc(100% - 32px);padding:35px;color:#4b435e;box-shadow:0 20px 100px #25203c33}dialog::backdrop{background:#211b3a66}dialog h2{margin:0 0 20px;font-size:26px}dialog p{line-height:1.9;font-size:14px}.close{position:absolute;right:17px;top:12px;border:0;background:none;font-size:28px;color:#8b8397}dialog .primary{margin-top:12px}@media(min-width:1500px){main{margin-right:auto;padding-left:75px;padding-right:75px}}@media(max-width:1100px){.sidebar{width:210px;padding:30px 18px}main{margin-left:210px;padding:34px 28px 20px}.stats>div{padding:0 18px}.quiz{padding:26px}.toolbar{padding:15px}.keys{display:none}.tabs button{padding:9px}.bottom-note{gap:16px}}@media(max-width:760px){.sidebar{position:relative;width:auto;padding:20px 20px 15px;border:0;border-bottom:1px solid var(--border)}.brand{font-size:18px}.logo{width:35px;height:35px;font-size:20px}.brand small{font-size:11px}.nav-label,.side-note,.sidebar>.text-button,.storage-note{display:none}nav{display:flex;gap:6px;overflow:auto;margin-top:20px}nav button{flex-shrink:0;gap:8px;padding:10px 12px;font-size:14px}nav b{font-size:12px}main{margin:0;padding:27px 16px 20px}header{margin:0 5px 24px;align-items:flex-start}h1{font-size:26px}.eyebrow{font-size:11px}.intro{font-size:13px}.sound{font-size:12px;padding:8px}.stats{padding:18px 0;margin-bottom:21px;border-radius:12px}.stats>div{padding:0 12px}.stats span{font-size:23px}.stats .stat-progress span{font-size:20px}.stats p,.stats small{font-size:11px}.toolbar{padding:12px;flex-wrap:wrap;gap:10px}.tabs{gap:0}.tabs button{font-size:13px;padding:8px 10px}.shuffle{font-size:12px;margin-left:10px}.quiz{padding:23px 20px}.question{font-size:19px;line-height:1.9}.option{padding:13px;font-size:15px;gap:11px}.quiz-top{margin-bottom:15px}.session-track{margin-bottom:20px}.bottom-note{gap:12px;font-size:10px;margin-bottom:20px}.primary,.secondary{padding:12px 18px}footer{font-size:11px;align-items:flex-start}.quiz-footer{margin-top:22px}.feedback{padding:16px}.feedback p{font-size:13px}dialog{padding:30px 25px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.static-question{padding:24px 0;border-top:1px solid #e9e8f1}.static-question .question{font-size:18px}.static-question details{margin:16px 0}summary{cursor:pointer;line-height:1.7}#offlineNotice{margin:0 0 20px}#staticFallback>.static-question:first-child{border:0}</style></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="logo">记</span><span>背诵自测<small>学习题库 · 离线版</small></span></a>
+  <div class="nav-label">选择练习范围</div>
+  <nav id="categories" aria-label="题型"></nav>
+  <div class="side-note"><span class="note-icon">✦</span><strong>每一道，都在进步</strong><p>先凭记忆作答，再核对答案。<br>错题会留下，答对后会移出。</p></div>
+  <button class="text-button" id="about">题库说明</button>
+  <p class="storage-note" id="storageNote">进度自动保存在当前浏览器</p>
+</aside>
+<main>
+  <header><div><p class="eyebrow">一点一点，把知识记牢</p><h1>今天，也记住一点。</h1><p class="intro">无需联网或登录，打开文件即可练习。</p></div><button class="sound" id="sound" aria-pressed="false">提示音：关</button></header>
+  <section class="stats" aria-label="学习进度"><div><span id="practiced">0</span><p>已练题目 <small>/ 165</small></p></div><div><span id="mastered">0</span><p>最近答对</p></div><div><span id="wrongTotal">0</span><p>待复习错题</p></div><div class="stat-progress"><span id="coverage">0%</span><p>题库覆盖率</p><div class="track"><i id="coverageBar"></i></div></div></section>
+  <div id="offlineNotice" class="source-note" role="status"><strong>如果只有题目、点击后没有判分：</strong>请把HTML文件下载到电脑，然后右键选择“打开方式 → Chrome / Edge / Safari”。聊天、微信和文件管理器里的预览可能禁止运行答题脚本。下方保留全部165道题，可直接展开背诵。</div><section class="workspace">
+    <div class="toolbar"><div class="tabs" role="group" aria-label="练习模式"><button data-mode="all" class="active">全部练习</button><button data-mode="wrong">只练错题 <span id="wrongBadge">0</span></button><button data-mode="new">未练题目</button></div><label class="shuffle"><input type="checkbox" id="shuffle">随机顺序</label></div>
+    <section id="quiz" class="quiz" aria-label="答题区域"><p class="pill">单选题 · 第1题</p><h2 class="question">《中国共产党章程》规定，党的最高理想和最终目标是实现（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-1" value="A">A．共产主义</label><label class="option"><input type="radio" name="static-single-1" value="B">B．中华民族伟大复兴</label><label class="option"><input type="radio" name="static-single-1" value="C">C．发展先进生产力</label><label class="option"><input type="radio" name="static-single-1" value="D">D．“中国梦”</label></div><details><summary>查看题库答案</summary><p>A．共产主义</p></details></section>
+  </section>
+<section id="staticFallback" class="workspace" style="margin-top:24px;padding:24px"><details><summary>展开完整离线题库（165道，逐题核对答案）</summary><article class="static-question" data-static-id="single-1"><p class="pill">单选题 · 第1题</p><h2 class="question">《中国共产党章程》规定，党的最高理想和最终目标是实现（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-1" value="A">A．共产主义</label><label class="option"><input type="radio" name="static-single-1" value="B">B．中华民族伟大复兴</label><label class="option"><input type="radio" name="static-single-1" value="C">C．发展先进生产力</label><label class="option"><input type="radio" name="static-single-1" value="D">D．“中国梦”</label></div><details><summary>查看题库答案</summary><p>A．共产主义</p></details></article><article class="static-question" data-static-id="single-2"><p class="pill">单选题 · 第2题</p><h2 class="question">《中国共产党章程》规定，中国共产党党员是（）的有共产主义觉悟的先锋战士。</h2><div class="options"><label class="option"><input type="radio" name="static-single-2" value="A">A．中国工人阶级</label><label class="option"><input type="radio" name="static-single-2" value="B">B．中国无产阶级</label><label class="option"><input type="radio" name="static-single-2" value="C">C．中国先进阶级</label><label class="option"><input type="radio" name="static-single-2" value="D">D．中国劳动人民</label></div><details><summary>查看题库答案</summary><p>A．中国工人阶级</p></details></article><article class="static-question" data-static-id="single-3"><p class="pill">单选题 · 第3题</p><h2 class="question">坚持（）高于一切，个人利益服从党和人民的利益，吃苦在前，享受在后，克己奉公，多做贡献。</h2><div class="options"><label class="option"><input type="radio" name="static-single-3" value="A">A．个人利益</label><label class="option"><input type="radio" name="static-single-3" value="B">B．局部利益</label><label class="option"><input type="radio" name="static-single-3" value="C">C．单位利益</label><label class="option"><input type="radio" name="static-single-3" value="D">D．党和人民的利益</label></div><details><summary>查看题库答案</summary><p>D．党和人民的利益</p></details></article><article class="static-question" data-static-id="single-4"><p class="pill">单选题 · 第4题</p><h2 class="question">中国共产党党徽为镰刀和（）组成的图案。</h2><div class="options"><label class="option"><input type="radio" name="static-single-4" value="A">A．斧头</label><label class="option"><input type="radio" name="static-single-4" value="B">B．锄头</label><label class="option"><input type="radio" name="static-single-4" value="C">C．五星</label><label class="option"><input type="radio" name="static-single-4" value="D">D．锤头</label></div><details><summary>查看题库答案</summary><p>D．锤头</p></details></article><article class="static-question" data-static-id="single-5"><p class="pill">单选题 · 第5题</p><h2 class="question">中国共产党党旗为旗面缀有（）党徽图案的红旗。</h2><div class="options"><label class="option"><input type="radio" name="static-single-5" value="A">A．红色</label><label class="option"><input type="radio" name="static-single-5" value="B">B．金黄色</label><label class="option"><input type="radio" name="static-single-5" value="C">C．橙色</label><label class="option"><input type="radio" name="static-single-5" value="D">D．白色</label></div><details><summary>查看题库答案</summary><p>B．金黄色</p></details></article><article class="static-question" data-static-id="single-6"><p class="pill">单选题 · 第6题</p><h2 class="question">党的基层委员会、总支部委员会、支部委员会每届任期（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-6" value="A">A．2年</label><label class="option"><input type="radio" name="static-single-6" value="B">B．3年</label><label class="option"><input type="radio" name="static-single-6" value="C">C．3年至5年</label><label class="option"><input type="radio" name="static-single-6" value="D">D．5年</label></div><details><summary>查看题库答案</summary><p>C．3年至5年</p></details></article><article class="static-question" data-static-id="single-7"><p class="pill">单选题 · 第7题</p><h2 class="question">党员如果没有正当理由，连续（）不参加党的组织生活，或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。</h2><div class="options"><label class="option"><input type="radio" name="static-single-7" value="A">A．3个月</label><label class="option"><input type="radio" name="static-single-7" value="B">B．6个月</label><label class="option"><input type="radio" name="static-single-7" value="C">C．12个月</label><label class="option"><input type="radio" name="static-single-7" value="D">D．24个月</label></div><details><summary>查看题库答案</summary><p>B．6个月</p></details></article><article class="static-question" data-static-id="single-8"><p class="pill">单选题 · 第8题</p><h2 class="question">党的纪律是党的（）必须遵守的行为规则，是维护党的团结统一、完成党的任务的保证。</h2><div class="options"><label class="option"><input type="radio" name="static-single-8" value="A">A．基层组织</label><label class="option"><input type="radio" name="static-single-8" value="B">B．所有干部</label><label class="option"><input type="radio" name="static-single-8" value="C">C．各级组织和全体党员</label><label class="option"><input type="radio" name="static-single-8" value="D">D．领导干部</label></div><details><summary>查看题库答案</summary><p>C．各级组织和全体党员</p></details></article><article class="static-question" data-static-id="single-9"><p class="pill">单选题 · 第9题</p><h2 class="question">党内严格禁止用违反（）的手段对待党员，严格禁止打击报复和诬告陷害。违反这些规定的组织或个人必须受到党的纪律和国家法律的追究。</h2><div class="options"><label class="option"><input type="radio" name="static-single-9" value="A">A．规章</label><label class="option"><input type="radio" name="static-single-9" value="B">B．道德</label><label class="option"><input type="radio" name="static-single-9" value="C">C．党章和国家法律</label><label class="option"><input type="radio" name="static-single-9" value="D">D．政策</label></div><details><summary>查看题库答案</summary><p>C．党章和国家法律</p></details></article><article class="static-question" data-static-id="single-10"><p class="pill">单选题 · 第10题</p><h2 class="question">党的最高领导机关是（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-10" value="A">A．党的全国代表大会和它所产生的中央委员会</label><label class="option"><input type="radio" name="static-single-10" value="B">B．党的全国代表大会和党的地方各级代表大会</label><label class="option"><input type="radio" name="static-single-10" value="C">C．党的中央政治局及其常务委员会</label><label class="option"><input type="radio" name="static-single-10" value="D">D．党的全国代表会议</label></div><details><summary>查看题库答案</summary><p>A．党的全国代表大会和它所产生的中央委员会</p></details></article><article class="static-question" data-static-id="single-11"><p class="pill">单选题 · 第11题</p><h2 class="question">中央八项规定的核心精神是：</h2><div class="options"><label class="option"><input type="radio" name="static-single-11" value="A">A．深化反腐败斗争，查处大案要案</label><label class="option"><input type="radio" name="static-single-11" value="B">B．改进工作作风、密切联系群众</label><label class="option"><input type="radio" name="static-single-11" value="C">C．规范公务支出，厉行勤俭节约</label><label class="option"><input type="radio" name="static-single-11" value="D">D．精简文件简报，改进会风文风</label></div><details><summary>查看题库答案</summary><p>B．改进工作作风、密切联系群众</p></details></article><article class="static-question" data-static-id="single-12"><p class="pill">单选题 · 第12题</p><h2 class="question">二十大报告指出，打铁必须自身硬，提出和落实新时代党的建设总要求，以党的（）统领党的建设各项工作。</h2><div class="options"><label class="option"><input type="radio" name="static-single-12" value="A">A．政治建设</label><label class="option"><input type="radio" name="static-single-12" value="B">B．文化建设</label><label class="option"><input type="radio" name="static-single-12" value="C">C．生态建设</label><label class="option"><input type="radio" name="static-single-12" value="D">D．思想建设</label></div><details><summary>查看题库答案</summary><p>A．政治建设</p></details></article><article class="static-question" data-static-id="single-13"><p class="pill">单选题 · 第13题</p><h2 class="question">党的()，是党的全部工作和战斗力的基础。</h2><div class="options"><label class="option"><input type="radio" name="static-single-13" value="A">A．中央组织</label><label class="option"><input type="radio" name="static-single-13" value="B">B．地方组织</label><label class="option"><input type="radio" name="static-single-13" value="C">C．基层组织</label><label class="option"><input type="radio" name="static-single-13" value="D">D．全体党员</label></div><details><summary>查看题库答案</summary><p>C．基层组织</p></details></article><article class="static-question" data-static-id="single-14"><p class="pill">单选题 · 第14题</p><h2 class="question">党徽党旗及其图案可以用于下列哪个活动。（）</h2><div class="options"><label class="option"><input type="radio" name="static-single-14" value="A">A．商标、授予专利权的外观设计和商业广告</label><label class="option"><input type="radio" name="static-single-14" value="B">B．私人活动</label><label class="option"><input type="radio" name="static-single-14" value="C">C．个人日常用品、日常生活的陈设布置</label><label class="option"><input type="radio" name="static-single-14" value="D">D．党的基层组织开展主题党日</label></div><details><summary>查看题库答案</summary><p>D．党的基层组织开展主题党日</p></details></article><article class="static-question" data-static-id="single-15"><p class="pill">单选题 · 第15题</p><h2 class="question">制作非通用尺度的党徽党旗，在规定情形外使用党徽党旗及其图案的，应当报（）党委组织部门批准。</h2><div class="options"><label class="option"><input type="radio" name="static-single-15" value="A">A．省级以上</label><label class="option"><input type="radio" name="static-single-15" value="B">B．市级以上</label><label class="option"><input type="radio" name="static-single-15" value="C">C．县级以上</label><label class="option"><input type="radio" name="static-single-15" value="D">D．乡级以上</label></div><details><summary>查看题库答案</summary><p>C．县级以上</p></details></article><article class="static-question" data-static-id="single-16"><p class="pill">单选题 · 第16题</p><h2 class="question">“开天辟地的大事变”指的是（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-16" value="A">A．五四运动</label><label class="option"><input type="radio" name="static-single-16" value="B">B．新文化运动</label><label class="option"><input type="radio" name="static-single-16" value="C">C．新中国成立</label><label class="option"><input type="radio" name="static-single-16" value="D">D．中国共产党成立</label></div><details><summary>查看题库答案</summary><p>D．中国共产党成立</p></details></article><article class="static-question" data-static-id="single-17"><p class="pill">单选题 · 第17题</p><h2 class="question">政治审查的基本方法是：同本人谈话、查阅有关档案材料、找有关单位和人员了解情况以及必要的（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-17" value="A">A．函调</label><label class="option"><input type="radio" name="static-single-17" value="B">B．外调</label><label class="option"><input type="radio" name="static-single-17" value="C">C．函调或外调</label><label class="option"><input type="radio" name="static-single-17" value="D">D．实地走访</label></div><details><summary>查看题库答案</summary><p>C．函调或外调</p></details></article><article class="static-question" data-static-id="single-18"><p class="pill">单选题 · 第18题</p><h2 class="question">根据《中共大连工业大学委员会发展党员工作实施细则》，发展党员工作的总要求是：</h2><div class="options"><label class="option"><input type="radio" name="static-single-18" value="A">A．坚持标准、保证质量、改善结构、慎重发展</label><label class="option"><input type="radio" name="static-single-18" value="B">B．控制总量、优化结构、提高质量、发挥作用</label><label class="option"><input type="radio" name="static-single-18" value="C">C．公平公正、程序规范、透明公开、择优发展</label><label class="option"><input type="radio" name="static-single-18" value="D">D．思想引领、政治合格、纪律严明、作用突出</label></div><details><summary>查看题库答案</summary><p>B．控制总量、优化结构、提高质量、发挥作用</p></details></article><article class="static-question" data-static-id="single-19"><p class="pill">单选题 · 第19题</p><h2 class="question">在考试、录取工作中，有泄露试题、考场舞弊、涂改考卷、违规录取等违反有关规定行为的，给予警告或者严重警告处分；情节较重的，给予（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-19" value="A">A．给予警告或严重警告处分</label><label class="option"><input type="radio" name="static-single-19" value="B">B．给予撤销党内职务或留党察看</label><label class="option"><input type="radio" name="static-single-19" value="C">C．给予留党察看或开除党籍</label><label class="option"><input type="radio" name="static-single-19" value="D">D．不予追究</label></div><details><summary>查看题库答案</summary><p>B．给予撤销党内职务或留党察看</p></details></article><article class="static-question" data-static-id="single-20"><p class="pill">单选题 · 第20题</p><h2 class="question">受到留党察看处分的党员，恢复党员权利后（）内，不得在党内担任和向党外组织推荐担任与其原任职务相当或者高于其原任职务的职务。</h2><div class="options"><label class="option"><input type="radio" name="static-single-20" value="A">A．一年</label><label class="option"><input type="radio" name="static-single-20" value="B">B．一年半</label><label class="option"><input type="radio" name="static-single-20" value="C">C．两年</label><label class="option"><input type="radio" name="static-single-20" value="D">D．五年</label></div><details><summary>查看题库答案</summary><p>C．两年</p></details></article><article class="static-question" data-static-id="single-21"><p class="pill">单选题 · 第21题</p><h2 class="question">（）是我们立党立国、兴党兴国的根本指导思想。</h2><div class="options"><label class="option"><input type="radio" name="static-single-21" value="A">A．为人民服务</label><label class="option"><input type="radio" name="static-single-21" value="B">B．以人民为中心</label><label class="option"><input type="radio" name="static-single-21" value="C">C．社会主义</label><label class="option"><input type="radio" name="static-single-21" value="D">D．马克思主义</label></div><details><summary>查看题库答案</summary><p>D．马克思主义</p></details></article><article class="static-question" data-static-id="single-22"><p class="pill">单选题 · 第22题</p><h2 class="question">违背社会公序良俗，在公共场所有不当行为，造成不良影响的，给予（）处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。</h2><div class="options"><label class="option"><input type="radio" name="static-single-22" value="A">A．警告或严重警告</label><label class="option"><input type="radio" name="static-single-22" value="B">B．撤销党内职务</label><label class="option"><input type="radio" name="static-single-22" value="C">C．留党察看</label><label class="option"><input type="radio" name="static-single-22" value="D">D．开除党籍</label></div><details><summary>查看题库答案</summary><p>A．警告或严重警告</p></details></article><article class="static-question" data-static-id="single-23"><p class="pill">单选题 · 第23题</p><h2 class="question">党组织在纪律审查中发现党员严重违纪涉嫌违法犯罪的，原则上先做出（）决定，并按照规定给予政务处分后，再移送有关国家机关依法处理。</h2><div class="options"><label class="option"><input type="radio" name="static-single-23" value="A">A．行政处罚</label><label class="option"><input type="radio" name="static-single-23" value="B">B．政纪处分</label><label class="option"><input type="radio" name="static-single-23" value="C">C．组织处理</label><label class="option"><input type="radio" name="static-single-23" value="D">D．党纪处分</label></div><details><summary>查看题库答案</summary><p>D．党纪处分</p></details></article><article class="static-question" data-static-id="single-24"><p class="pill">单选题 · 第24题</p><h2 class="question">一切为了群众，一切依靠群众，从群众中来，到群众中去，把党的正确主张变为群众的自觉行动。这是党章对（）的表述。</h2><div class="options"><label class="option"><input type="radio" name="static-single-24" value="A">A．党的思想路线</label><label class="option"><input type="radio" name="static-single-24" value="B">B．党的政治路线</label><label class="option"><input type="radio" name="static-single-24" value="C">C．党的群众路线</label><label class="option"><input type="radio" name="static-single-24" value="D">D．党的组织路线</label></div><details><summary>查看题库答案</summary><p>C．党的群众路线</p></details></article><article class="static-question" data-static-id="single-25"><p class="pill">单选题 · 第25题</p><h2 class="question">《党章》明确规定，党除了（），没有自己特殊的利益。</h2><div class="options"><label class="option"><input type="radio" name="static-single-25" value="A">A．工人阶级的利益</label><label class="option"><input type="radio" name="static-single-25" value="B">B．最广大人民群众的利益</label><label class="option"><input type="radio" name="static-single-25" value="C">C．工人阶级和最广大人民群众的利益</label><label class="option"><input type="radio" name="static-single-25" value="D">D．农民阶级的利益</label></div><details><summary>查看题库答案</summary><p>C．工人阶级和最广大人民群众的利益</p></details></article><article class="static-question" data-static-id="single-26"><p class="pill">单选题 · 第26题</p><h2 class="question">《党章》明确规定，党必须在（）的范围内活动。</h2><div class="options"><label class="option"><input type="radio" name="static-single-26" value="A">A．法律和法规</label><label class="option"><input type="radio" name="static-single-26" value="B">B．法律和党纪</label><label class="option"><input type="radio" name="static-single-26" value="C">C．宪法和法律</label><label class="option"><input type="radio" name="static-single-26" value="D">D．党纪和国法</label></div><details><summary>查看题库答案</summary><p>C．宪法和法律</p></details></article><article class="static-question" data-static-id="single-27"><p class="pill">单选题 · 第27题</p><h2 class="question">入党介绍人的任务是认真了解申请人的思想、品质、经历和工作表现，向他解释（），说明党员的条件、义务和权利，并向党组织作出负责的报告。</h2><div class="options"><label class="option"><input type="radio" name="static-single-27" value="A">A．党的路线方针政策</label><label class="option"><input type="radio" name="static-single-27" value="B">B．党的纲领和党的章程</label><label class="option"><input type="radio" name="static-single-27" value="C">C．党的历史</label><label class="option"><input type="radio" name="static-single-27" value="D">D．党的路程</label></div><details><summary>查看题库答案</summary><p>B．党的纲领和党的章程</p></details></article><article class="static-question" data-static-id="single-28"><p class="pill">单选题 · 第28题</p><h2 class="question">发展党员，必须坚持（）的原则。</h2><div class="options"><label class="option"><input type="radio" name="static-single-28" value="A">A．集体吸收</label><label class="option"><input type="radio" name="static-single-28" value="B">B．个别吸收</label><label class="option"><input type="radio" name="static-single-28" value="C">C．相互吸收</label><label class="option"><input type="radio" name="static-single-28" value="D">D．独立吸收</label></div><details><summary>查看题库答案</summary><p>B．个别吸收</p></details></article><article class="static-question" data-static-id="single-29"><p class="pill">单选题 · 第29题</p><h2 class="question">入党誓词如下：我志愿加入中国共产党,拥护党的纲领,（），履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切,永不叛党。</h2><div class="options"><label class="option"><input type="radio" name="static-single-29" value="A">A．遵守党的章程</label><label class="option"><input type="radio" name="static-single-29" value="B">B．遵守国家的法律</label><label class="option"><input type="radio" name="static-single-29" value="C">C．遵守党的纪律</label><label class="option"><input type="radio" name="static-single-29" value="D">D．遵守社会规则</label></div><details><summary>查看题库答案</summary><p>A．遵守党的章程</p></details></article><article class="static-question" data-static-id="single-30"><p class="pill">单选题 · 第30题</p><h2 class="question">每个党员，不论职务高低，都必须编入党的一个支部、小组或其他特定组织，参加党的（），接受党内外群众的监督。</h2><div class="options"><label class="option"><input type="radio" name="static-single-30" value="A">A．民主生活</label><label class="option"><input type="radio" name="static-single-30" value="B">B．组织生活</label><label class="option"><input type="radio" name="static-single-30" value="C">C．学习活动</label><label class="option"><input type="radio" name="static-single-30" value="D">D．民主生活会</label></div><details><summary>查看题库答案</summary><p>B．组织生活</p></details></article><article class="static-question" data-static-id="single-31"><p class="pill">单选题 · 第31题</p><h2 class="question">劝党员退党,简称“劝退”，是指党员缺乏革命意志，（），不符合党员条件，经党的支部对其进行教育并在限期内仍无改正和转变的,党组织应当劝其退党。</h2><div class="options"><label class="option"><input type="radio" name="static-single-31" value="A">A．不履行党员义务</label><label class="option"><input type="radio" name="static-single-31" value="B">B．不行使党员权利</label><label class="option"><input type="radio" name="static-single-31" value="C">C．不参加党的组织生活</label><label class="option"><input type="radio" name="static-single-31" value="D">D．不缴纳党费</label></div><details><summary>查看题库答案</summary><p>A．不履行党员义务</p></details></article><article class="static-question" data-static-id="single-32"><p class="pill">单选题 · 第32题</p><h2 class="question">党的民主集中制的基本原则之一是“四个服从”，即党员个人服从党的组织,（）,下级组织服从上级组织，全党各个组织和全体党员服从党的全国代表大会和中央委员会。</h2><div class="options"><label class="option"><input type="radio" name="static-single-32" value="A">A．党委委员服从党委书记</label><label class="option"><input type="radio" name="static-single-32" value="B">B．少数服从多数</label><label class="option"><input type="radio" name="static-single-32" value="C">C．普通党员服从党组织书记</label><label class="option"><input type="radio" name="static-single-32" value="D">D．综合平衡不同意见</label></div><details><summary>查看题库答案</summary><p>B．少数服从多数</p></details></article><article class="static-question" data-static-id="single-33"><p class="pill">单选题 · 第33题</p><h2 class="question">党组织讨论决定问题，必须执行（）的原则。</h2><div class="options"><label class="option"><input type="radio" name="static-single-33" value="A">A．个人服从组织</label><label class="option"><input type="radio" name="static-single-33" value="B">B．少数服从多数</label><label class="option"><input type="radio" name="static-single-33" value="C">C．下级服从上级</label><label class="option"><input type="radio" name="static-single-33" value="D">D．上级指导下级</label></div><details><summary>查看题库答案</summary><p>B．少数服从多数</p></details></article><article class="static-question" data-static-id="single-34"><p class="pill">单选题 · 第34题</p><h2 class="question">《党章》规定，在党的纪律面前（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-34" value="A">A．党员和群众一律平等</label><label class="option"><input type="radio" name="static-single-34" value="B">B．不同级别的党员干部有所区别</label><label class="option"><input type="radio" name="static-single-34" value="C">C．所有党员一律平等</label><label class="option"><input type="radio" name="static-single-34" value="D">D．普通党员一律平等</label></div><details><summary>查看题库答案</summary><p>C．所有党员一律平等</p></details></article><article class="static-question" data-static-id="single-35"><p class="pill">单选题 · 第35题</p><h2 class="question">党的各级组织和每一个党员都要维护党徽党旗的（），要按照规定制作和使用党徽党旗。</h2><div class="options"><label class="option"><input type="radio" name="static-single-35" value="A">A．形象</label><label class="option"><input type="radio" name="static-single-35" value="B">B．尊严</label><label class="option"><input type="radio" name="static-single-35" value="C">C．声誉</label><label class="option"><input type="radio" name="static-single-35" value="D">D．完整</label></div><details><summary>查看题库答案</summary><p>B．尊严</p></details></article><article class="static-question" data-static-id="single-36"><p class="pill">单选题 · 第36题</p><h2 class="question">《关于新形势下党内政治生活的若干准则》指出，加强和规范党内政治生活，必须以（）为根本遵循。</h2><div class="options"><label class="option"><input type="radio" name="static-single-36" value="A">A．党章</label><label class="option"><input type="radio" name="static-single-36" value="B">B．法律</label><label class="option"><input type="radio" name="static-single-36" value="C">C．准则</label><label class="option"><input type="radio" name="static-single-36" value="D">D．宪法</label></div><details><summary>查看题库答案</summary><p>A．党章</p></details></article><article class="static-question" data-static-id="single-37"><p class="pill">单选题 · 第37题</p><h2 class="question">《关于新形势下党内政治生活的若干准则》指出，中国共产党人的精神支柱和政治灵魂是（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-37" value="A">A．马克思列宁主义</label><label class="option"><input type="radio" name="static-single-37" value="B">B．共产主义远大理想</label><label class="option"><input type="radio" name="static-single-37" value="C">C．中国特色社会主义共同理想</label><label class="option"><input type="radio" name="static-single-37" value="D">D．共产主义远大理想和中国特色社会主义共同理想</label></div><details><summary>查看题库答案</summary><p>D．共产主义远大理想和中国特色社会主义共同理想</p></details></article><article class="static-question" data-static-id="single-38"><p class="pill">单选题 · 第38题</p><h2 class="question">《中国共产党廉洁自律准则》要求，党员要坚持公私分明,（），克己奉公。</h2><div class="options"><label class="option"><input type="radio" name="static-single-38" value="A">A．先人后己</label><label class="option"><input type="radio" name="static-single-38" value="B">B．公私兼顾</label><label class="option"><input type="radio" name="static-single-38" value="C">C．舍己为公</label><label class="option"><input type="radio" name="static-single-38" value="D">D．先公后私</label></div><details><summary>查看题库答案</summary><p>D．先公后私</p></details></article><article class="static-question" data-static-id="single-39"><p class="pill">单选题 · 第39题</p><h2 class="question">《中国共产党纪律处分条例》规定，党的纪律是党的各级组织和全体党员（）遵守的行为规则。</h2><div class="options"><label class="option"><input type="radio" name="static-single-39" value="A">A．必须</label><label class="option"><input type="radio" name="static-single-39" value="B">B．倡导</label><label class="option"><input type="radio" name="static-single-39" value="C">C．一般</label><label class="option"><input type="radio" name="static-single-39" value="D">D．特殊</label></div><details><summary>查看题库答案</summary><p>A．必须</p></details></article><article class="static-question" data-static-id="single-40"><p class="pill">单选题 · 第40题</p><h2 class="question">习近平总书记指出，坚持一个中国原则和“九二共识”,推动两岸关系和平发展，加强两岸（）交流合作，实现两岸领导人历史性会晤。妥善应对台湾局势变化，坚决反对和遏制“台独”分裂势力，有力维护台海和平稳定。</h2><div class="options"><label class="option"><input type="radio" name="static-single-40" value="A">A．政治文化</label><label class="option"><input type="radio" name="static-single-40" value="B">B．经济文化</label><label class="option"><input type="radio" name="static-single-40" value="C">C．政治互动</label><label class="option"><input type="radio" name="static-single-40" value="D">D．经济贸易</label></div><details><summary>查看题库答案</summary><p>B．经济文化</p></details></article><article class="static-question" data-static-id="single-41"><p class="pill">单选题 · 第41题</p><h2 class="question">习近平总书记指出，实现伟大梦想，必须推进伟大事业。（）是激励全党全国各族人民奋勇前进的强大精神力量。</h2><div class="options"><label class="option"><input type="radio" name="static-single-41" value="A">A．中国特色社会主义道路</label><label class="option"><input type="radio" name="static-single-41" value="B">B．中国特色社会主义理论体系</label><label class="option"><input type="radio" name="static-single-41" value="C">C．中国特色社会主义制度</label><label class="option"><input type="radio" name="static-single-41" value="D">D．中国特色社会主义文化</label></div><details><summary>查看题库答案</summary><p>D．中国特色社会主义文化</p></details></article><article class="static-question" data-static-id="single-42"><p class="pill">单选题 · 第42题</p><h2 class="question">贯彻落实习近平新时代中国特色社会主义思想，必须坚持人民当家作主。坚持（）、人民当家作主、依法治国有机统一是社会主义政治发展的必然要求。</h2><div class="options"><label class="option"><input type="radio" name="static-single-42" value="A">A．党的执政</label><label class="option"><input type="radio" name="static-single-42" value="B">B．党的权威</label><label class="option"><input type="radio" name="static-single-42" value="C">C．党的领导</label><label class="option"><input type="radio" name="static-single-42" value="D">D．党的建设</label></div><details><summary>查看题库答案</summary><p>C．党的领导</p></details></article><article class="static-question" data-static-id="single-43"><p class="pill">单选题 · 第43题</p><h2 class="question">贯彻落实习近平新时代中国特色社会主义思想，必须坚持推动构建（）。中国人民的梦想同各国人民的梦想息息相通，实现中国梦离不开和平的国际环境和稳定的国际秩序。</h2><div class="options"><label class="option"><input type="radio" name="static-single-43" value="A">A．全球命运共同体</label><label class="option"><input type="radio" name="static-single-43" value="B">B．国家命运共同体</label><label class="option"><input type="radio" name="static-single-43" value="C">C．人类命运共同体</label><label class="option"><input type="radio" name="static-single-43" value="D">D．经济命运共同体</label></div><details><summary>查看题库答案</summary><p>C．人类命运共同体</p></details></article><article class="static-question" data-static-id="single-44"><p class="pill">单选题 · 第44题</p><h2 class="question">习近平总书记指出，我国是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家，国家一切权力属于（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-44" value="A">A．工人</label><label class="option"><input type="radio" name="static-single-44" value="B">B．人民</label><label class="option"><input type="radio" name="static-single-44" value="C">C．农民</label><label class="option"><input type="radio" name="static-single-44" value="D">D．社会新阶层</label></div><details><summary>查看题库答案</summary><p>B．人民</p></details></article><article class="static-question" data-static-id="single-45"><p class="pill">单选题 · 第45题</p><h2 class="question">习近平总书记强调，坚持党的领导，是社会主义法治的（）要求，是全面推进依法治国题中应有之义。</h2><div class="options"><label class="option"><input type="radio" name="static-single-45" value="A">A．一般</label><label class="option"><input type="radio" name="static-single-45" value="B">B．重要</label><label class="option"><input type="radio" name="static-single-45" value="C">C．根本</label><label class="option"><input type="radio" name="static-single-45" value="D">D．基本</label></div><details><summary>查看题库答案</summary><p>C．根本</p></details></article><article class="static-question" data-static-id="single-46"><p class="pill">单选题 · 第46题</p><h2 class="question">习近平总书记强调，司法是维护社会公平正义的最后一道防线。（）是司法的灵魂和生命。</h2><div class="options"><label class="option"><input type="radio" name="static-single-46" value="A">A．公开</label><label class="option"><input type="radio" name="static-single-46" value="B">B．公平</label><label class="option"><input type="radio" name="static-single-46" value="C">C．公正</label><label class="option"><input type="radio" name="static-single-46" value="D">D．公示</label></div><details><summary>查看题库答案</summary><p>C．公正</p></details></article><article class="static-question" data-static-id="single-47"><p class="pill">单选题 · 第47题</p><h2 class="question">习近平总书记强调，做好新形势下统战工作，最根本的是要（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-47" value="A">A．掌握规律</label><label class="option"><input type="radio" name="static-single-47" value="B">B．坚持原则</label><label class="option"><input type="radio" name="static-single-47" value="C">C．讲究方法</label><label class="option"><input type="radio" name="static-single-47" value="D">D．坚持党的领导</label></div><details><summary>查看题库答案</summary><p>D．坚持党的领导</p></details></article><article class="static-question" data-static-id="single-48"><p class="pill">单选题 · 第48题</p><h2 class="question">习近平总书记在庆祝改革开放40周年大会上的讲话强调，改革开放40年的实践启示我们：方向决定（）,道路决定（）。我们要把命运掌握在自己手中，就要有志不改、道不变的坚定。</h2><div class="options"><label class="option"><input type="radio" name="static-single-48" value="A">A．命运前途</label><label class="option"><input type="radio" name="static-single-48" value="B">B．前途命运</label><label class="option"><input type="radio" name="static-single-48" value="C">C．选择未来</label><label class="option"><input type="radio" name="static-single-48" value="D">D．未来选择</label></div><details><summary>查看题库答案</summary><p>B．前途命运</p></details></article><article class="static-question" data-static-id="single-49"><p class="pill">单选题 · 第49题</p><h2 class="question">习近平总书记指出，必须推进马克思主义中国化时代化大众化，建设具有强大凝聚力和引领力的社会主义（），使全体人民在理想信念、价值理念、道德观念上紧紧团结在一起。</h2><div class="options"><label class="option"><input type="radio" name="static-single-49" value="A">A．意识形态</label><label class="option"><input type="radio" name="static-single-49" value="B">B．法律形态</label><label class="option"><input type="radio" name="static-single-49" value="C">C．社会形态</label><label class="option"><input type="radio" name="static-single-49" value="D">D．文学形态</label></div><details><summary>查看题库答案</summary><p>A．意识形态</p></details></article><article class="static-question" data-static-id="single-50"><p class="pill">单选题 · 第50题</p><h2 class="question">习近平总书记指出，社会主义文艺必须坚持以（）为中心的创作导向，在深入生活、扎根人民中进行无愧于时代的文艺创造。</h2><div class="options"><label class="option"><input type="radio" name="static-single-50" value="A">A．经济</label><label class="option"><input type="radio" name="static-single-50" value="B">B．环境</label><label class="option"><input type="radio" name="static-single-50" value="C">C．人民</label><label class="option"><input type="radio" name="static-single-50" value="D">D．政府</label></div><details><summary>查看题库答案</summary><p>C．人民</p></details></article><article class="static-question" data-static-id="single-51"><p class="pill">单选题 · 第51题</p><h2 class="question">习近平总书记指出，必须始终把人民利益摆在至高无上的地位，让（）更多更公平惠及全体人民，朝着实现全体人民共同富裕不断迈进。</h2><div class="options"><label class="option"><input type="radio" name="static-single-51" value="A">A．改革发展成果</label><label class="option"><input type="radio" name="static-single-51" value="B">B．教育发展成果</label><label class="option"><input type="radio" name="static-single-51" value="C">C．精神文明成果</label><label class="option"><input type="radio" name="static-single-51" value="D">D．物质文明成果</label></div><details><summary>查看题库答案</summary><p>A．改革发展成果</p></details></article><article class="static-question" data-static-id="single-52"><p class="pill">单选题 · 第52题</p><h2 class="question">习近平总书记强调，国家安全工作归根结底是（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-52" value="A">A．维护国家安全</label><label class="option"><input type="radio" name="static-single-52" value="B">B．保障人民利益</label><label class="option"><input type="radio" name="static-single-52" value="C">C．提升国家地位</label><label class="option"><input type="radio" name="static-single-52" value="D">D．建设安全中国</label></div><details><summary>查看题库答案</summary><p>B．保障人民利益</p></details></article><article class="static-question" data-static-id="single-53"><p class="pill">单选题 · 第53题</p><h2 class="question">习近平总书记强调，做好国家安全工作的根本原则是（）。</h2><div class="options"><label class="option"><input type="radio" name="static-single-53" value="A">A．保障人权</label><label class="option"><input type="radio" name="static-single-53" value="B">B．坚持党对国家安全工作的管理</label><label class="option"><input type="radio" name="static-single-53" value="C">C．共同安全</label><label class="option"><input type="radio" name="static-single-53" value="D">D．坚持党对国家安全工作的领导</label></div><details><summary>查看题库答案</summary><p>D．坚持党对国家安全工作的领导</p></details></article><article class="static-question" data-static-id="single-54"><p class="pill">单选题 · 第54题</p><h2 class="question">习近平总书记指出，推进祖国统一,必须,坚持一个中国的原则，坚持“九二共识”,推动两岸关系和平发展,深化两岸经济合作和文化往来，推动两岸同胞（），共同为实现中,华民族伟大复兴而奋斗。</h2><div class="options"><label class="option"><input type="radio" name="static-single-54" value="A">A．共同反对一切分裂国家的活动</label><label class="option"><input type="radio" name="static-single-54" value="B">B．包容互惠、开放创新</label><label class="option"><input type="radio" name="static-single-54" value="C">C．和而不同、兼收并蓄的交流</label><label class="option"><input type="radio" name="static-single-54" value="D">D．奉行互利共赢的发展道路</label></div><details><summary>查看题库答案</summary><p>A．共同反对一切分裂国家的活动</p></details></article><article class="static-question" data-static-id="single-55"><p class="pill">单选题 · 第55题</p><h2 class="question">习近平总书记指出，解决台湾问题、实现祖国完全统一，是全体中华儿女（）,是中华民族（）所在。</h2><div class="options"><label class="option"><input type="radio" name="static-single-55" value="A">A．未来愿望根本利益</label><label class="option"><input type="radio" name="static-single-55" value="B">B．共同愿望现实利益</label><label class="option"><input type="radio" name="static-single-55" value="C">C．未来愿望现实利益</label><label class="option"><input type="radio" name="static-single-55" value="D">D．共同愿望根本利益</label></div><details><summary>查看题库答案</summary><p>D．共同愿望根本利益</p></details></article><article class="static-question" data-static-id="single-56"><p class="pill">单选题 · 第56题</p><h2 class="question">习近平总书记指出，（）是两岸关系的政治基础。</h2><div class="options"><label class="option"><input type="radio" name="static-single-56" value="A">A．“九二共识”</label><label class="option"><input type="radio" name="static-single-56" value="B">B．反对“台独”</label><label class="option"><input type="radio" name="static-single-56" value="C">C．一个中国原则</label><label class="option"><input type="radio" name="static-single-56" value="D">D．和平统一</label></div><details><summary>查看题库答案</summary><p>C．一个中国原则</p></details></article><article class="static-question" data-static-id="single-57"><p class="pill">单选题 · 第57题</p><h2 class="question">习近平总书记指出，弘扬马克思主义学风,推进“两学一做”学习教育常态化制度化，以县处级以上领导干部为重点，在全党开展（）主题教育，用党的创新理论武装头脑，推动全党更加自觉地为实现新时代党的历史使命不懈奋斗。</h2><div class="options"><label class="option"><input type="radio" name="static-single-57" value="A">A．“不忘初心、牢记使命”</label><label class="option"><input type="radio" name="static-single-57" value="B">B．“为民务实清廉”</label><label class="option"><input type="radio" name="static-single-57" value="C">C．“三严三实”</label><label class="option"><input type="radio" name="static-single-57" value="D">D．“不忘初心、继续前进”</label></div><details><summary>查看题库答案</summary><p>A．“不忘初心、牢记使命”</p></details></article><article class="static-question" data-static-id="single-58"><p class="pill">单选题 · 第58题</p><h2 class="question">中国共产党要领导全国各族人民实现“两个一百年”奋斗目标,实现中华民族伟大复兴的中国梦，必须紧密围绕党的基本路线，加强党的长期执政能力建设、（）建设。</h2><div class="options"><label class="option"><input type="radio" name="static-single-58" value="A">A．先进性</label><label class="option"><input type="radio" name="static-single-58" value="B">B．纯洁性</label><label class="option"><input type="radio" name="static-single-58" value="C">C．先进性和纯洁性</label><label class="option"><input type="radio" name="static-single-58" value="D">D．精神文明</label></div><details><summary>查看题库答案</summary><p>C．先进性和纯洁性</p></details></article><article class="static-question" data-static-id="single-59"><p class="pill">单选题 · 第59题</p><h2 class="question">近平总书记强调，在所有党的纪律和规矩中，第一位的是（）</h2><div class="options"><label class="option"><input type="radio" name="static-single-59" value="A">A．政治纪律和政治规矩</label><label class="option"><input type="radio" name="static-single-59" value="B">B．组织纪律和组织规矩</label><label class="option"><input type="radio" name="static-single-59" value="C">C．生活纪律和生活规矩</label><label class="option"><input type="radio" name="static-single-59" value="D">D．工作纪律和工作规矩</label></div><details><summary>查看题库答案</summary><p>A．政治纪律和政治规矩</p></details></article><article class="static-question" data-static-id="single-60"><p class="pill">单选题 · 第60题</p><h2 class="question">习近平总书记强调，作风问题本质上是（）问题。</h2><div class="options"><label class="option"><input type="radio" name="static-single-60" value="A">A．文化</label><label class="option"><input type="radio" name="static-single-60" value="B">B．党性</label><label class="option"><input type="radio" name="static-single-60" value="C">C．履职</label><label class="option"><input type="radio" name="static-single-60" value="D">D．观念</label></div><details><summary>查看题库答案</summary><p>B．党性</p></details></article><article class="static-question" data-static-id="multiple-1"><p class="pill">多选题 · 第1题</p><h2 class="question">《党章》明确规定，各项工作都要把（）作为总的出发点和检验标准。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-1" value="A">A．有利于发展社会主义社会的生产力</label><label class="option"><input type="checkbox" name="static-multiple-1" value="B">B．有利于増强社会主义国家的综合国力</label><label class="option"><input type="checkbox" name="static-multiple-1" value="C">C．有利于改善生活环境</label><label class="option"><input type="checkbox" name="static-multiple-1" value="D">D．有利于提高人民的生活水平</label></div><details><summary>查看题库答案</summary><p>A．有利于发展社会主义社会的生产力；B．有利于増强社会主义国家的综合国力；D．有利于提高人民的生活水平</p></details></article><article class="static-question" data-static-id="multiple-2"><p class="pill">多选题 · 第2题</p><h2 class="question">《党章》规定，选举人有（）的权利。任何组织和个人不得以任何方式强迫选举人选举或不选举某个人。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-2" value="A">A．了解候选人情况</label><label class="option"><input type="checkbox" name="static-multiple-2" value="B">B．要求改变候选人</label><label class="option"><input type="checkbox" name="static-multiple-2" value="C">C．不选任何一个候选人和另选他人</label><label class="option"><input type="checkbox" name="static-multiple-2" value="D">D．要求候选人必须作出说明</label></div><details><summary>查看题库答案</summary><p>A．了解候选人情况；B．要求改变候选人；C．不选任何一个候选人和另选他人</p></details></article><article class="static-question" data-static-id="multiple-3"><p class="pill">多选题 · 第3题</p><h2 class="question">党支部是党的基础组织，担负直接教育党员、管理党员、监督党员和（）的职责。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-3" value="A">A．组织群众</label><label class="option"><input type="checkbox" name="static-multiple-3" value="B">B．宣传群众</label><label class="option"><input type="checkbox" name="static-multiple-3" value="C">C．凝聚群众</label><label class="option"><input type="checkbox" name="static-multiple-3" value="D">D．服务群众</label></div><details><summary>查看题库答案</summary><p>A．组织群众；B．宣传群众；C．凝聚群众；D．服务群众</p></details></article><article class="static-question" data-static-id="multiple-4"><p class="pill">多选题 · 第4题</p><h2 class="question">《关于新形势下党内政治生活的若干准则》强调，严格党的组织生活制度，必须坚持“三会一课”制度。党员必须参加（）和上党课，党支部要定期召开支部委员会会议。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-4" value="A">A．党员大会</label><label class="option"><input type="checkbox" name="static-multiple-4" value="B">B．中心组学习（扩大）会</label><label class="option"><input type="checkbox" name="static-multiple-4" value="C">C．党小组会</label><label class="option"><input type="checkbox" name="static-multiple-4" value="D">D．党员代表会议</label></div><details><summary>查看题库答案</summary><p>A．党员大会；B．中心组学习（扩大）会；C．党小组会；D．党员代表会议</p></details></article><article class="static-question" data-static-id="multiple-5"><p class="pill">多选题 · 第5题</p><h2 class="question">《中国共产党党员权利保障条例》规定，对于有侵犯党员权利行为的党员，其所在党组织或者上级党组织可以釆取哪些方式给予处理（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-5" value="A">A．责令停止侵权行为</label><label class="option"><input type="checkbox" name="static-multiple-5" value="B">B．责令赔礼道歉</label><label class="option"><input type="checkbox" name="static-multiple-5" value="C">C．责令作出检查</label><label class="option"><input type="checkbox" name="static-multiple-5" value="D">D．诫勉谈话或者通报批评</label></div><details><summary>查看题库答案</summary><p>A．责令停止侵权行为；B．责令赔礼道歉；C．责令作出检查；D．诫勉谈话或者通报批评</p></details></article><article class="static-question" data-static-id="multiple-6"><p class="pill">多选题 · 第6题</p><h2 class="question">以下应当使用党旗的情形是（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-6" value="A">A．举行新党员入党宣誓仪式，组织党员重温入党誓词；</label><label class="option"><input type="checkbox" name="static-multiple-6" value="B">B．党内举行重大庆祝、纪念活动；</label><label class="option"><input type="checkbox" name="static-multiple-6" value="C">C．党的中央和地方委员会及其工作部门、党的中央和地方委员会在特定地域派出的代表机关及其工作部门、党的纪律检查机关、党组的会议室。</label></div><details><summary>查看题库答案</summary><p>A．举行新党员入党宣誓仪式，组织党员重温入党誓词；；B．党内举行重大庆祝、纪念活动；；C．党的中央和地方委员会及其工作部门、党的中央和地方委员会在特定地域派出的代表机关及其工作部门、党的纪律检查机关、党组的会议室。</p></details></article><article class="static-question" data-static-id="multiple-7"><p class="pill">多选题 · 第7题</p><h2 class="question">习近平新时代中国特色社会主义思想，是（），是党和国家必须长期坚持的指导思想。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-7" value="A">A．马克思主义中国化最新成果</label><label class="option"><input type="checkbox" name="static-multiple-7" value="B">B．当代中国马克思主义、21世纪马克思主义</label><label class="option"><input type="checkbox" name="static-multiple-7" value="C">C．党和人民实践经验和集体智慧的结晶</label><label class="option"><input type="checkbox" name="static-multiple-7" value="D">D．中国特色社会主义理论体系的重要组成部分</label></div><details><summary>查看题库答案</summary><p>A．马克思主义中国化最新成果；B．当代中国马克思主义、21世纪马克思主义；C．党和人民实践经验和集体智慧的结晶；D．中国特色社会主义理论体系的重要组成部分</p></details></article><article class="static-question" data-static-id="multiple-8"><p class="pill">多选题 · 第8题</p><h2 class="question">中国共产党党徽党旗及其图案不得用于（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-8" value="A">A．商标、授予专利权的外观设计和商业广告</label><label class="option"><input type="checkbox" name="static-multiple-8" value="B">B．私人活动；私人场所、个人网络空间的标识物</label><label class="option"><input type="checkbox" name="static-multiple-8" value="C">C．个人日常用品、日常生活的陈设布置</label><label class="option"><input type="checkbox" name="static-multiple-8" value="D">D．其他不适宜的场所、情形和环境</label></div><details><summary>查看题库答案</summary><p>A．商标、授予专利权的外观设计和商业广告；B．私人活动；私人场所、个人网络空间的标识物；C．个人日常用品、日常生活的陈设布置；D．其他不适宜的场所、情形和环境</p></details></article><article class="static-question" data-static-id="multiple-9"><p class="pill">多选题 · 第9题</p><h2 class="question">各项工作都要把（）作为总的出发点和检验标准，尊重劳动、尊重知识、尊重人才、尊重创造，做到发展为了人民、发展依靠人民、发展成果由人民共享。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-9" value="A">A．有利于发展社会主义社会的生产力</label><label class="option"><input type="checkbox" name="static-multiple-9" value="B">B．有利于增强社会主义国家的综合国力</label><label class="option"><input type="checkbox" name="static-multiple-9" value="C">C．有利于提高人民的生活水平</label><label class="option"><input type="checkbox" name="static-multiple-9" value="D">D．有利于提高国际地位</label></div><details><summary>查看题库答案</summary><p>A．有利于发展社会主义社会的生产力；B．有利于增强社会主义国家的综合国力；C．有利于提高人民的生活水平</p></details></article><article class="static-question" data-static-id="multiple-10"><p class="pill">多选题 · 第10题</p><h2 class="question">以下叙述符合《中国共产党党徽党旗条例》要求的是（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-10" value="A">A．不得在党徽党旗上添加任何文字、符号和图案等</label><label class="option"><input type="checkbox" name="static-multiple-10" value="B">B．不得使用破损、污损、褪色的党徽党旗</label><label class="option"><input type="checkbox" name="static-multiple-10" value="C">C．不得制作使用任何不符合本条例所附制法说明的党徽党旗</label><label class="option"><input type="checkbox" name="static-multiple-10" value="D">D．不得倒挂、倒插或者以其他有损党徽党旗尊严的方式升挂、使用党徽党旗</label></div><details><summary>查看题库答案</summary><p>A．不得在党徽党旗上添加任何文字、符号和图案等；B．不得使用破损、污损、褪色的党徽党旗；C．不得制作使用任何不符合本条例所附制法说明的党徽党旗；D．不得倒挂、倒插或者以其他有损党徽党旗尊严的方式升挂、使用党徽党旗</p></details></article><article class="static-question" data-static-id="multiple-11"><p class="pill">多选题 · 第11题</p><h2 class="question">中国共产党同全国各民族工人、农民、知识分子团结在一起，同各民主党派、无党派人士、各民族的爱国力量团结在一起，进一步发展和壮大由（）组成的最广泛的爱国统一战线。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-11" value="A">A．全体社会主义劳动者</label><label class="option"><input type="checkbox" name="static-multiple-11" value="B">B．社会主义事业的建设者</label><label class="option"><input type="checkbox" name="static-multiple-11" value="C">C．拥护社会主义的爱国者</label><label class="option"><input type="checkbox" name="static-multiple-11" value="D">D．拥护祖国统一和致力于中华民族伟大复兴的爱国者</label></div><details><summary>查看题库答案</summary><p>A．全体社会主义劳动者；B．社会主义事业的建设者；C．拥护社会主义的爱国者；D．拥护祖国统一和致力于中华民族伟大复兴的爱国者</p></details></article><article class="static-question" data-static-id="multiple-12"><p class="pill">多选题 · 第12题</p><h2 class="question">有下列情形之一的，可以从轻或者减轻处分。（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-12" value="A">A．主动交代本人应当受到党纪处分的问题的</label><label class="option"><input type="checkbox" name="static-multiple-12" value="B">B．在组织核实、立案审查过程中，能够配合核实审查工作如实说明本人违纪违法事实的</label><label class="option"><input type="checkbox" name="static-multiple-12" value="C">C．检举同案人或者其他人应当受到党纪处分或者法律追究的问题，经查证属实的</label><label class="option"><input type="checkbox" name="static-multiple-12" value="D">D．主动挽回损失、消除不良影响或者有效阻止危害结果发生的</label></div><details><summary>查看题库答案</summary><p>A．主动交代本人应当受到党纪处分的问题的；B．在组织核实、立案审查过程中，能够配合核实审查工作如实说明本人违纪违法事实的；C．检举同案人或者其他人应当受到党纪处分或者法律追究的问题，经查证属实的；D．主动挽回损失、消除不良影响或者有效阻止危害结果发生的</p></details></article><article class="static-question" data-static-id="multiple-13"><p class="pill">多选题 · 第13题</p><h2 class="question">违反民主集中制原则，()给予警告或者严重警告处分;情节严重的，给予撤销党内职务或者留党察看处分。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-13" value="A">A．拒不执行或者擅自改变党组织做出的重大决定的</label><label class="option"><input type="checkbox" name="static-multiple-13" value="B">B．违反议事规则，个人或者少数人决定重大问题的</label><label class="option"><input type="checkbox" name="static-multiple-13" value="C">C．故意规避集体决策，决定重大事项、重要干部任免、重要项目安排和大额资金使用的</label><label class="option"><input type="checkbox" name="static-multiple-13" value="D">D．借集体决策名义集体违规的</label></div><details><summary>查看题库答案</summary><p>A．拒不执行或者擅自改变党组织做出的重大决定的；B．违反议事规则，个人或者少数人决定重大问题的；C．故意规避集体决策，决定重大事项、重要干部任免、重要项目安排和大额资金使用的；D．借集体决策名义集体违规的</p></details></article><article class="static-question" data-static-id="multiple-14"><p class="pill">多选题 · 第14题</p><h2 class="question">关于习近平新时代中国特色社会主义思想重大意义，理解正确的有（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-14" value="A">A．是新时代中国共产党人的思想旗帜</label><label class="option"><input type="checkbox" name="static-multiple-14" value="B">B．为发展马克思主义作出了中国的原创性贡献</label><label class="option"><input type="checkbox" name="static-multiple-14" value="C">C．是国家政治生活和社会生活的根本指针</label><label class="option"><input type="checkbox" name="static-multiple-14" value="D">D．为建设美好世界贡献了中国智慧、中国方案</label></div><details><summary>查看题库答案</summary><p>A．是新时代中国共产党人的思想旗帜；B．为发展马克思主义作出了中国的原创性贡献；C．是国家政治生活和社会生活的根本指针；D．为建设美好世界贡献了中国智慧、中国方案</p></details></article><article class="static-question" data-static-id="multiple-15"><p class="pill">多选题 · 第15题</p><h2 class="question">对抗组织审查，有下列行为之一的，给予警告或者严重警告处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-15" value="A">A．串供或者伪造、销毁、转移、隐匿证据的</label><label class="option"><input type="checkbox" name="static-multiple-15" value="B">B．阻止他人揭发检举、提供证据材料的</label><label class="option"><input type="checkbox" name="static-multiple-15" value="C">C．包庇同案人员的</label><label class="option"><input type="checkbox" name="static-multiple-15" value="D">D．向组织提供虚假情况，掩盖事实的</label></div><details><summary>查看题库答案</summary><p>A．串供或者伪造、销毁、转移、隐匿证据的；B．阻止他人揭发检举、提供证据材料的；C．包庇同案人员的；D．向组织提供虚假情况，掩盖事实的</p></details></article><article class="static-question" data-static-id="multiple-16"><p class="pill">多选题 · 第16题</p><h2 class="question">中国产生了共产党，这是开天辟地的大事变，深刻改变了()。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-16" value="A">A．近代以后中华民族发展的方向和进程</label><label class="option"><input type="checkbox" name="static-multiple-16" value="B">B．时代发展的主题和任务</label><label class="option"><input type="checkbox" name="static-multiple-16" value="C">C．中国人民和中华民族的前途和命运</label><label class="option"><input type="checkbox" name="static-multiple-16" value="D">D．世界发展的趋势和格局</label></div><details><summary>查看题库答案</summary><p>A．近代以后中华民族发展的方向和进程；C．中国人民和中华民族的前途和命运；D．世界发展的趋势和格局</p></details></article><article class="static-question" data-static-id="multiple-17"><p class="pill">多选题 · 第17题</p><h2 class="question">中国共产党领导人民发展社会主义民主政治，坚持()有机统一，走中国特色社会主义政治发展道路。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-17" value="A">A．党的领导</label><label class="option"><input type="checkbox" name="static-multiple-17" value="B">B．人民当家作主</label><label class="option"><input type="checkbox" name="static-multiple-17" value="C">C．以德治国</label><label class="option"><input type="checkbox" name="static-multiple-17" value="D">D．依法治国</label></div><details><summary>查看题库答案</summary><p>A．党的领导；B．人民当家作主；D．依法治国</p></details></article><article class="static-question" data-static-id="multiple-18"><p class="pill">多选题 · 第18题</p><h2 class="question">泄露、扩散或者打探、窃取党组织关于()等尚未公开事项或者其他应当保密的内容的，给予警告或者严重警告处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-18" value="A">A．干部选拔任用</label><label class="option"><input type="checkbox" name="static-multiple-18" value="B">B．纪律审查</label><label class="option"><input type="checkbox" name="static-multiple-18" value="C">C．巡视巡察</label></div><details><summary>查看题库答案</summary><p>A．干部选拔任用；B．纪律审查；C．巡视巡察</p></details></article><article class="static-question" data-static-id="multiple-19"><p class="pill">多选题 · 第19题</p><h2 class="question">习近平总书记指出，中国特色社会主义进入新时代,在（）发展史上具有重大意义。全党要坚定信心、奋发有为,让中国特色社会主义展现出更加强大的生命力。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-19" value="A">A．中华人民共和国</label><label class="option"><input type="checkbox" name="static-multiple-19" value="B">B．中华民族</label><label class="option"><input type="checkbox" name="static-multiple-19" value="C">C．世界社会主义</label><label class="option"><input type="checkbox" name="static-multiple-19" value="D">D．人类社会</label></div><details><summary>查看题库答案</summary><p>A．中华人民共和国；B．中华民族；C．世界社会主义；D．人类社会</p></details></article><article class="static-question" data-static-id="multiple-20"><p class="pill">多选题 · 第20题</p><h2 class="question">习近平总书记指出，全党要更加自觉地增强（），既不走封闭僵化的老路，也不走改旗易帜的邪路，保持政治定力，坚持实干兴邦，始终坚持和发展中国特色社会主义。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-20" value="A">A．道路自信</label><label class="option"><input type="checkbox" name="static-multiple-20" value="B">B．理论自信</label><label class="option"><input type="checkbox" name="static-multiple-20" value="C">C．制度自信</label><label class="option"><input type="checkbox" name="static-multiple-20" value="D">D．文化自信</label></div><details><summary>查看题库答案</summary><p>A．道路自信；B．理论自信；C．制度自信；D．文化自信</p></details></article><article class="static-question" data-static-id="multiple-21"><p class="pill">多选题 · 第21题</p><h2 class="question">习近平总书记指出，新时代中国特色社会主义思想是对马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观的继承和发展,（）,必须长期坚持并不断发展。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-21" value="A">A．是马克思主义中国化最新成果</label><label class="option"><input type="checkbox" name="static-multiple-21" value="B">B．是党和人民实践经验和集体智慧的结晶</label><label class="option"><input type="checkbox" name="static-multiple-21" value="C">C．是中国特色社会主义理论体系的重要组成部分</label><label class="option"><input type="checkbox" name="static-multiple-21" value="D">D．是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南</label></div><details><summary>查看题库答案</summary><p>A．是马克思主义中国化最新成果；B．是党和人民实践经验和集体智慧的结晶；C．是中国特色社会主义理论体系的重要组成部分；D．是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南</p></details></article><article class="static-question" data-static-id="multiple-22"><p class="pill">多选题 · 第22题</p><h2 class="question">习近平新时代中国特色社会主义思想“十四个坚持”基本方略,包含：坚持党对一切工作的领导；（）；坚持全面依法治国；坚持社会主义核心价值体系；坚持在发展中保障和改善民生；坚持人与自然和谐共生；坚持总体国家安全观；坚持党对人民军队的绝对领导；坚持“一国两制”和推进祖国统一；坚持推动构建人类命运共同体；坚持全面从严治党。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-22" value="A">A．坚持以人民为中心</label><label class="option"><input type="checkbox" name="static-multiple-22" value="B">B．坚持全面深化改革</label><label class="option"><input type="checkbox" name="static-multiple-22" value="C">C．坚持新发展理念</label><label class="option"><input type="checkbox" name="static-multiple-22" value="D">D．坚持人民当家作主</label></div><details><summary>查看题库答案</summary><p>A．坚持以人民为中心；B．坚持全面深化改革；C．坚持新发展理念；D．坚持人民当家作主</p></details></article><article class="static-question" data-static-id="multiple-23"><p class="pill">多选题 · 第23题</p><h2 class="question">习近平新时代中国特色社会主义思想强调，坚持（）有机统一是社会主义政治发展的必然要求。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-23" value="A">A．党的领导</label><label class="option"><input type="checkbox" name="static-multiple-23" value="B">B．人民当家作主</label><label class="option"><input type="checkbox" name="static-multiple-23" value="C">C．依法治国</label><label class="option"><input type="checkbox" name="static-multiple-23" value="D">D．改革开放</label></div><details><summary>查看题库答案</summary><p>A．党的领导；B．人民当家作主；C．依法治国</p></details></article><article class="static-question" data-static-id="multiple-24"><p class="pill">多选题 · 第24题</p><h2 class="question">习近平新时代中国特色社会主义思想强调，坚持党对人民军队的绝对领导。建设一支（）的人民军队，是实现“两个一百年”奋斗目标、实现中华民族伟大复兴的战略支撑。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-24" value="A">A．听党指挥</label><label class="option"><input type="checkbox" name="static-multiple-24" value="B">B．能打胜仗</label><label class="option"><input type="checkbox" name="static-multiple-24" value="C">C．作风优良</label><label class="option"><input type="checkbox" name="static-multiple-24" value="D">D．实事求是</label></div><details><summary>查看题库答案</summary><p>A．听党指挥；B．能打胜仗；C．作风优良</p></details></article><article class="static-question" data-static-id="multiple-25"><p class="pill">多选题 · 第25题</p><h2 class="question">习近平新时代中国特色社会主义思想强调，必须坚持国家利益至上,以人民安全为宗旨,以政治安全为根本,统筹（），完善国,家安全制度体系，加强国家安全能力建设，坚决维护国家主权、安全、发展利益。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-25" value="A">A．外部安全和内部安全</label><label class="option"><input type="checkbox" name="static-multiple-25" value="B">B．国土安全和国民安全</label><label class="option"><input type="checkbox" name="static-multiple-25" value="C">C．传统安全和非传统安全</label><label class="option"><input type="checkbox" name="static-multiple-25" value="D">D．自身安全和共同安全</label></div><details><summary>查看题库答案</summary><p>A．外部安全和内部安全；B．国土安全和国民安全；C．传统安全和非传统安全；D．自身安全和共同安全</p></details></article><article class="static-question" data-static-id="multiple-26"><p class="pill">多选题 · 第26题</p><h2 class="question">习近平总书记指出，全面依法治国是国家治理的一场深刻革命，必须坚持厉行法治，推进（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-26" value="A">A．科学立法</label><label class="option"><input type="checkbox" name="static-multiple-26" value="B">B．严格执法</label><label class="option"><input type="checkbox" name="static-multiple-26" value="C">C．公正司法</label><label class="option"><input type="checkbox" name="static-multiple-26" value="D">D．全民守法</label></div><details><summary>查看题库答案</summary><p>A．科学立法；B．严格执法；C．公正司法；D．全民守法</p></details></article><article class="static-question" data-static-id="multiple-27"><p class="pill">多选题 · 第27题</p><h2 class="question">习近平总书记强调，坚定不移走中国特色社会主义法治道路，必须坚持中国共产党的领导，必须（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-27" value="A">A．坚持人民主体地位</label><label class="option"><input type="checkbox" name="static-multiple-27" value="B">B．坚持法律面前人人平等</label><label class="option"><input type="checkbox" name="static-multiple-27" value="C">C．坚持依法治国和以德治国相结合</label><label class="option"><input type="checkbox" name="static-multiple-27" value="D">D．坚持从中国实际出发</label></div><details><summary>查看题库答案</summary><p>A．坚持人民主体地位；B．坚持法律面前人人平等；C．坚持依法治国和以德治国相结合；D．坚持从中国实际出发</p></details></article><article class="static-question" data-static-id="multiple-28"><p class="pill">多选题 · 第28题</p><h2 class="question">习近平总书记强调，宗教问题始终是我们党治国理政必须处理好的重大问题，宗教工作在党和国家工作全局中具有特殊重要性,（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-28" value="A">A．关系中国特色社会主义事业发展</label><label class="option"><input type="checkbox" name="static-multiple-28" value="B">B．关系党同人民群众的血肉联系</label><label class="option"><input type="checkbox" name="static-multiple-28" value="C">C．关系社会和谐、民族团结</label><label class="option"><input type="checkbox" name="static-multiple-28" value="D">D．关系国家安全和祖国统一</label></div><details><summary>查看题库答案</summary><p>A．关系中国特色社会主义事业发展；B．关系党同人民群众的血肉联系；C．关系社会和谐、民族团结；D．关系国家安全和祖国统一</p></details></article><article class="static-question" data-static-id="multiple-29"><p class="pill">多选题 · 第29题</p><h2 class="question">全面依法治国是坚持和发展中国特色社会主义的本质要求和重要保障，事关我们党（）,事关人民（）,事关党和国家（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-29" value="A">A．执政兴国</label><label class="option"><input type="checkbox" name="static-multiple-29" value="B">B．幸福安康</label><label class="option"><input type="checkbox" name="static-multiple-29" value="C">C．事业发展</label><label class="option"><input type="checkbox" name="static-multiple-29" value="D">D．长治久安</label></div><details><summary>查看题库答案</summary><p>A．执政兴国；B．幸福安康；D．长治久安</p></details></article><article class="static-question" data-static-id="multiple-30"><p class="pill">多选题 · 第30题</p><h2 class="question">人民当家作主是社会主义民主政治的本质和核心。习近平总书记指出：“发展社会主义民主政治就是要体现（）、保障（）、激发（），用制度体系保证人民当家作主。”</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-30" value="A">A．人民意志</label><label class="option"><input type="checkbox" name="static-multiple-30" value="B">B．人民权益</label><label class="option"><input type="checkbox" name="static-multiple-30" value="C">C．人民创造活力</label><label class="option"><input type="checkbox" name="static-multiple-30" value="D">D．人民幸福感</label></div><details><summary>查看题库答案</summary><p>A．人民意志；B．人民权益；C．人民创造活力</p></details></article><article class="static-question" data-static-id="multiple-31"><p class="pill">多选题 · 第31题</p><h2 class="question">习近平总书记指出，推动社会主义文化繁荣兴盛，要坚持（），坚持百花齐放、百家争鸣，坚持创造性转化、创新性发展，不断铸就中华文化新辉煌。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-31" value="A">A．为人民服务</label><label class="option"><input type="checkbox" name="static-multiple-31" value="B">B．为公民服务</label><label class="option"><input type="checkbox" name="static-multiple-31" value="C">C．为社会主义服务</label><label class="option"><input type="checkbox" name="static-multiple-31" value="D">D．为共产主义服务</label></div><details><summary>查看题库答案</summary><p>A．为人民服务；C．为社会主义服务</p></details></article><article class="static-question" data-static-id="multiple-32"><p class="pill">多选题 · 第32题</p><h2 class="question">习近平总书记指出，加强思想道德建设，要广泛开展理想信念教育，深化中国特色社会主义和中国梦宣传教育,弘扬民族精神和时代精神，加强爱国主义、集体主义、社会主义教育，引导人们树立正确的（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-32" value="A">A．历史观</label><label class="option"><input type="checkbox" name="static-multiple-32" value="B">B．民族观</label><label class="option"><input type="checkbox" name="static-multiple-32" value="C">C．国家观</label><label class="option"><input type="checkbox" name="static-multiple-32" value="D">D．文化观</label></div><details><summary>查看题库答案</summary><p>A．历史观；B．民族观；C．国家观；D．文化观</p></details></article><article class="static-question" data-static-id="multiple-33"><p class="pill">多选题 · 第33题</p><h2 class="question">习近平总书记强调，要切实把社会主义核心价值观贯穿于社会生活方方面面。要通过教育引导、（）等，使社会主义核心价值观内化为人们的精神追求，外化为人们的自觉行动。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-33" value="A">A．舆论宣传</label><label class="option"><input type="checkbox" name="static-multiple-33" value="B">B．文化熏陶</label><label class="option"><input type="checkbox" name="static-multiple-33" value="C">C．实践养成</label><label class="option"><input type="checkbox" name="static-multiple-33" value="D">D．制度保障</label></div><details><summary>查看题库答案</summary><p>A．舆论宣传；B．文化熏陶；C．实践养成；D．制度保障</p></details></article><article class="static-question" data-static-id="multiple-34"><p class="pill">多选题 · 第34题</p><h2 class="question">习近平总书记强调，各级领导干部特别是高级干部要继承和弘扬中华优秀传统文化，要（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-34" value="A">A．保持高尚道德情操和健康生活情趣</label><label class="option"><input type="checkbox" name="static-multiple-34" value="B">B．严格要求亲属子女，过好亲情关</label><label class="option"><input type="checkbox" name="static-multiple-34" value="C">C．为全社会做表率</label><label class="option"><input type="checkbox" name="static-multiple-34" value="D">D．把修身、齐家落到实处</label></div><details><summary>查看题库答案</summary><p>A．保持高尚道德情操和健康生活情趣；B．严格要求亲属子女，过好亲情关；C．为全社会做表率</p></details></article><article class="static-question" data-static-id="multiple-35"><p class="pill">多选题 · 第35题</p><h2 class="question">习近平主席指出，（），有这样伟大的人民，有这样伟大的民族，有这样的伟大民族精神，是我们的骄傲，是我们坚定中国特色社会主义道路自信、理论自信、制度自信、文化自信的底气，也是我们风雨无阻、高歌行进的根本力量。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-35" value="A">A．中国人民是具有伟大创造精神的人民</label><label class="option"><input type="checkbox" name="static-multiple-35" value="B">B．中国人民是具有伟大奋斗精神的人民</label><label class="option"><input type="checkbox" name="static-multiple-35" value="C">C．中国人民是具有伟大团结精神的人民</label><label class="option"><input type="checkbox" name="static-multiple-35" value="D">D．中国人民是具有伟大梦想精神的人民</label></div><details><summary>查看题库答案</summary><p>A．中国人民是具有伟大创造精神的人民；B．中国人民是具有伟大奋斗精神的人民；C．中国人民是具有伟大团结精神的人民；D．中国人民是具有伟大梦想精神的人民</p></details></article><article class="static-question" data-static-id="multiple-36"><p class="pill">多选题 · 第36题</p><h2 class="question">习近平总书记强调，我们的人民热爱生活，期盼有（）,期盼孩子们能成长得更好、工作得更好、生活得更好。人民对美好生活的向往，就是我们的奋斗目标。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-36" value="A">A．更好的教育、更稳定的工作</label><label class="option"><input type="checkbox" name="static-multiple-36" value="B">B．更满意的收入、更可靠的社会保障</label><label class="option"><input type="checkbox" name="static-multiple-36" value="C">C．更高水平的医疗卫生服务</label><label class="option"><input type="checkbox" name="static-multiple-36" value="D">D．更舒适的居住条件、更优美的环境</label></div><details><summary>查看题库答案</summary><p>A．更好的教育、更稳定的工作；B．更满意的收入、更可靠的社会保障；C．更高水平的医疗卫生服务；D．更舒适的居住条件、更优美的环境</p></details></article><article class="static-question" data-static-id="multiple-37"><p class="pill">多选题 · 第37题</p><h2 class="question">习近平总书记强调，扩大中等收入群体，关系全面建成小康社会目标的实现，（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-37" value="A">A．是保证社会阶层结构合理的必然要求</label><label class="option"><input type="checkbox" name="static-multiple-37" value="B">B．是转方式调结构的必然要求</label><label class="option"><input type="checkbox" name="static-multiple-37" value="C">C．是维护社会和谐稳定的必然要求</label><label class="option"><input type="checkbox" name="static-multiple-37" value="D">D．是维护国家长治久安的必然要求</label></div><details><summary>查看题库答案</summary><p>A．是保证社会阶层结构合理的必然要求；B．是转方式调结构的必然要求；C．是维护社会和谐稳定的必然要求；D．是维护国家长治久安的必然要求</p></details></article><article class="static-question" data-static-id="multiple-38"><p class="pill">多选题 · 第38题</p><h2 class="question">习近平总书记强调，必须坚持总体国家安全观,（）,以促进国际安全为依托，走出一条中国特色国家安全道路。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-38" value="A">A．以人民安全为宗旨</label><label class="option"><input type="checkbox" name="static-multiple-38" value="B">B．以政治安全为根本</label><label class="option"><input type="checkbox" name="static-multiple-38" value="C">C．以经济安全为基础</label><label class="option"><input type="checkbox" name="static-multiple-38" value="D">D．以军事、文化、社会安全为保障</label></div><details><summary>查看题库答案</summary><p>A．以人民安全为宗旨；B．以政治安全为根本；C．以经济安全为基础；D．以军事、文化、社会安全为保障</p></details></article><article class="static-question" data-static-id="multiple-39"><p class="pill">多选题 · 第39题</p><h2 class="question">习近平总书记强调，准确把握国家安全形势变化新特点新趋势，坚持（），既重视自身安全，又重视共同安全，切实做好国家安全各项工作。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-39" value="A">A．既重视外部安全，又重视内部安全</label><label class="option"><input type="checkbox" name="static-multiple-39" value="B">B．既重视国土安全，又重视国民安全</label><label class="option"><input type="checkbox" name="static-multiple-39" value="C">C．既重视传统安全，又重视非传统安全</label><label class="option"><input type="checkbox" name="static-multiple-39" value="D">D．既重视发展问题，又重视安全问题</label></div><details><summary>查看题库答案</summary><p>A．既重视外部安全，又重视内部安全；B．既重视国土安全，又重视国民安全；C．既重视传统安全，又重视非传统安全；D．既重视发展问题，又重视安全问题</p></details></article><article class="static-question" data-static-id="multiple-40"><p class="pill">多选题 · 第40题</p><h2 class="question">从现在起，中国共产党的中心任务就是（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-40" value="A">A．团结带领全国各族人民全面建成社会主义现代化强国，实现第二个百年奋斗目标</label><label class="option"><input type="checkbox" name="static-multiple-40" value="B">B．以中国式现代化全面推进中华民族伟大复兴</label><label class="option"><input type="checkbox" name="static-multiple-40" value="C">C．推进城乡融合和区域协调发展</label><label class="option"><input type="checkbox" name="static-multiple-40" value="D">D．推动共建一带一路高质量发展</label></div><details><summary>查看题库答案</summary><p>A．团结带领全国各族人民全面建成社会主义现代化强国，实现第二个百年奋斗目标；B．以中国式现代化全面推进中华民族伟大复兴</p></details></article><article class="static-question" data-static-id="multiple-41"><p class="pill">多选题 · 第41题</p><h2 class="question">中国式现代化的本质要求是（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-41" value="A">A．坚持中国共产党领导</label><label class="option"><input type="checkbox" name="static-multiple-41" value="B">B．坚持中国特色社会主义，实现高质量发展</label><label class="option"><input type="checkbox" name="static-multiple-41" value="C">C．发展全过程人民民主，丰富人民精神世界</label><label class="option"><input type="checkbox" name="static-multiple-41" value="D">D．实现全体人民共同富裕</label><label class="option"><input type="checkbox" name="static-multiple-41" value="E">E．促进人与自然和谐共生</label><label class="option"><input type="checkbox" name="static-multiple-41" value="F">F．推动构建人类命运共同体，创造人类文明新形态。</label></div><details><summary>查看题库答案</summary><p>A．坚持中国共产党领导；B．坚持中国特色社会主义，实现高质量发展；C．发展全过程人民民主，丰富人民精神世界；D．实现全体人民共同富裕；E．促进人与自然和谐共生；F．推动构建人类命运共同体，创造人类文明新形态。</p></details></article><article class="static-question" data-static-id="multiple-42"><p class="pill">多选题 · 第42题</p><h2 class="question">习近平总书记指出，全党要更加自觉地增强（），既不走封闭僵化的老路，也不走改旗易帜的邪路，保持政治定力，坚持实干兴邦，始终坚持和发展中国特色社会主义。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-42" value="A">A．道路自信</label><label class="option"><input type="checkbox" name="static-multiple-42" value="B">B．理论自信</label><label class="option"><input type="checkbox" name="static-multiple-42" value="C">C．制度自信</label><label class="option"><input type="checkbox" name="static-multiple-42" value="D">D．文化自信</label></div><details><summary>查看题库答案</summary><p>A．道路自信；B．理论自信；C．制度自信；D．文化自信</p></details></article><article class="static-question" data-static-id="multiple-43"><p class="pill">多选题 · 第43题</p><h2 class="question">党的建设必须实现的基本要求是（）。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-43" value="A">A．坚持党的基本路线</label><label class="option"><input type="checkbox" name="static-multiple-43" value="B">B．坚持解放思想，实事求是，与时俱进，求真务实</label><label class="option"><input type="checkbox" name="static-multiple-43" value="C">C．坚持全心全意为人民服务</label><label class="option"><input type="checkbox" name="static-multiple-43" value="D">D．坚持民主集中制</label></div><details><summary>查看题库答案</summary><p>A．坚持党的基本路线；B．坚持解放思想，实事求是，与时俱进，求真务实；C．坚持全心全意为人民服务；D．坚持民主集中制</p></details></article><article class="static-question" data-static-id="multiple-44"><p class="pill">多选题 · 第44题</p><h2 class="question">党的十八大以来，中央出台八项规定，严厉整治(),巡视利剑作用彰显。</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-44" value="A">A．奢靡之风</label><label class="option"><input type="checkbox" name="static-multiple-44" value="B">B．官僚主义</label><label class="option"><input type="checkbox" name="static-multiple-44" value="C">C．享乐主义</label><label class="option"><input type="checkbox" name="static-multiple-44" value="D">D．形式主义</label></div><details><summary>查看题库答案</summary><p>A．奢靡之风；B．官僚主义；C．享乐主义；D．形式主义</p></details></article><article class="static-question" data-static-id="multiple-45"><p class="pill">多选题 · 第45题</p><h2 class="question">持之以恒推进全面从严治党遵循的原则（）</h2><div class="options"><label class="option"><input type="checkbox" name="static-multiple-45" value="A">A．坚持服务使命任务</label><label class="option"><input type="checkbox" name="static-multiple-45" value="B">B．坚持以党的政治建设为统领</label><label class="option"><input type="checkbox" name="static-multiple-45" value="C">C．坚持全面从严</label><label class="option"><input type="checkbox" name="static-multiple-45" value="D">D．坚持问题导向</label><label class="option"><input type="checkbox" name="static-multiple-45" value="E">E．坚持守正创新</label><label class="option"><input type="checkbox" name="static-multiple-45" value="F">F．坚持以上率下</label><label class="option"><input type="checkbox" name="static-multiple-45" value="G">G．坚持依规治党</label></div><details><summary>查看题库答案</summary><p>A．坚持服务使命任务；B．坚持以党的政治建设为统领；C．坚持全面从严；D．坚持问题导向；E．坚持守正创新；F．坚持以上率下；G．坚持依规治党</p></details></article><article class="static-question" data-static-id="judge-1"><p class="pill">判断题 · 第1题</p><h2 class="question">党支部每半年对入党积极分子进行一次考察。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-1" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-1" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-2"><p class="pill">判断题 · 第2题</p><h2 class="question">凡是未经政治审查或政治审查不合格的，不能发展入党。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-2" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-2" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-3"><p class="pill">判断题 · 第3题</p><h2 class="question">发展对象未来三个月将离开工作、学习单位的，一般不办理接收预备党员的手续。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-3" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-3" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-4"><p class="pill">判断题 · 第4题</p><h2 class="question">《中国人民政治协商会议共同纲领》在新中国成立之初起着临时宪法的作用。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-4" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-4" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-5"><p class="pill">判断题 · 第5题</p><h2 class="question">中国共产党党徽党旗制作、使用、管理必须坚持统一标准、统一规范。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-5" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-5" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-6"><p class="pill">判断题 · 第6题</p><h2 class="question">“一带一路”建设遵循共商、共建、共享原则，将为欧亚大陆的振兴开辟新的广阔前景。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-6" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-6" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-7"><p class="pill">判断题 · 第7题</p><h2 class="question">入党申请人应当向工作、学习所在单位党组织提出入党申请，没有工作、学习单位或工作、学习单位未建立党组织的，应当向居住地党组织提出入党申请。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-7" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-7" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-8"><p class="pill">判断题 · 第8题</p><h2 class="question">政治审查必须严肃认真、实事求是，注重本人的一贯表现。审查情况应当形成结论性材料。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-8" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-8" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-9"><p class="pill">判断题 · 第9题 · 补充题</p><h2 class="question">中国共产党的根本宗旨是全心全意为人民服务。（ ）</h2><p class="source-note">补充题：原文判断题缺第9题，本题依据原题库填空题第11题补充。</p><div class="options"><label class="option"><input type="radio" name="static-judge-9" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-9" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-10"><p class="pill">判断题 · 第10题</p><h2 class="question">维护党徽党旗的尊严，就是维护党的尊严，是各级党组织和每名党员必须履行的政治责任。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-10" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-10" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-11"><p class="pill">判断题 · 第11题</p><h2 class="question">《党章》规定,党选拔干部坚持五湖四海、任人唯贤，反对任人唯亲。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-11" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-11" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-12"><p class="pill">判断题 · 第12题</p><h2 class="question">毛泽东思想是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-12" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-12" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-13"><p class="pill">判断题 · 第13题</p><h2 class="question">中国共产党领导全国各族人民取得新民主主义革命胜利后，建立了民主集中制的中华人民共和国。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-13" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-13" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-14"><p class="pill">判断题 · 第14题</p><h2 class="question">邓小平理论是马克思列宁主义的基本原理同当代中国实践和时代特征相结合的产物。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-14" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-14" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-15"><p class="pill">判断题 · 第15题</p><h2 class="question">“三个代表”重要思想反映了当代世界和中国的发展变化对党和国家工作的新要求。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-15" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-15" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-16"><p class="pill">判断题 · 第16题</p><h2 class="question">科学发展观深刻认识和回答了新形势下实现什么样的发展、怎样发展等重大问题。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-16" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-16" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-17"><p class="pill">判断题 · 第17题</p><h2 class="question">在现阶段，我国社会的主要矛盾是人民日益增长的美好生活需要和不协调不充分的发展之间的矛盾。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-17" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-17" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-18"><p class="pill">判断题 · 第18题</p><h2 class="question">习近平新时代中国特色社会主义思想系统回答了新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义这个重大时代课题。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-18" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-18" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-19"><p class="pill">判断题 · 第19题</p><h2 class="question">中国共产党在社会主义初级阶段的基本路线是：领导和团结全国各族人民，以经济建设为中心，坚持四项基本原则，坚持改革开放，自力更生，艰苦创业，为把我国建设成为富强民主文明和谐美丽的社会主义现代化强国而奋斗。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-19" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-19" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-20"><p class="pill">判断题 · 第20题</p><h2 class="question">社会主义精神文明建设要实行依法治国和以德治国相结合（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-20" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-20" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-21"><p class="pill">判断题 · 第21题</p><h2 class="question">改革是我们党执政兴国的第一要务。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-21" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-21" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-22"><p class="pill">判断题 · 第22题</p><h2 class="question">马克思列宁主义揭示了人类社会历史发展的规律，它的基本原理是正确的，具有强大的生命力。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-22" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-22" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-23"><p class="pill">判断题 · 第23题</p><h2 class="question">我们党的最大政治优势是密切联系群众，党执政后的最大危险是脱离群众。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-23" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-23" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-24"><p class="pill">判断题 · 第24题</p><h2 class="question">党的领导主要是政治、思想和群众工作的领导。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-24" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-24" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-25"><p class="pill">判断题 · 第25题</p><h2 class="question">年满十八岁的中国工人、农民、军人、知识分子和其他革命分子，满足条件的，可以申请加入中国共产党。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-25" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-25" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-26"><p class="pill">判断题 · 第26题</p><h2 class="question">党员必须认真学习马克思列宁主义、毛泽东思想、邓小平理论,学习党的路线、方针、政策及决议，学习党的基本知识，努力提高为人民服务的本领。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-26" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-26" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-27"><p class="pill">判断题 · 第27题</p><h2 class="question">党员对党的决议和政策如有不同意见，在坚决执行的前提下，可以声明保留，并且可以把自己的意见向党的上级组织直至中央提出。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-27" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-27" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-28"><p class="pill">判断题 · 第28题</p><h2 class="question">申请入党的人，只要上级党组织批准，并且经过预备期的考察,就能成为正式党员。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-28" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-28" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-29"><p class="pill">判断题 · 第29题</p><h2 class="question">上级党组织在批准申请人入党以前，要派人同他谈话，作进一步的了解，并帮助他提高对党的认识。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-29" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-29" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-30"><p class="pill">判断题 · 第30题</p><h2 class="question">申请入党的人必须有两名党员作介绍人。这里的党员是指党员领导干部。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-30" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-30" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-31"><p class="pill">判断题 · 第31题</p><h2 class="question">预备党员的权利，除了没有表决权、选举权和被选举权以外，也同正式党员一样。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-31" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-31" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-32"><p class="pill">判断题 · 第32题</p><h2 class="question">党员的党龄，从支部大会通过他为预备党员之日算起。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-32" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-32" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-33"><p class="pill">判断题 · 第33题</p><h2 class="question">预备党员取消预备党员资格，应当经支部大会讨论通过和上级党组织批准。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-33" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-33" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-34"><p class="pill">判断题 · 第34题</p><h2 class="question">党员领导干部必须参加党委、党组的民主生活会。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-34" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-34" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-35"><p class="pill">判断题 · 第35题</p><h2 class="question">党员根据实际情况，可以不编入党的一个支部、小组或者其他特定组织参加党组织活动。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-35" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-35" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>B．错</p></details></article><article class="static-question" data-static-id="judge-36"><p class="pill">判断题 · 第36题</p><h2 class="question">党组织讨论决定问题，必须执行少数服从多数的原则。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-36" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-36" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-37"><p class="pill">判断题 · 第37题</p><h2 class="question">《关于新形势下党内政治生活的若干准则》指出，人民立场是党的根本政治立场，人民群众是党的力量源泉。我们党来自人民，失去人民拥护和支持，党就会失去根基。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-37" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-37" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-38"><p class="pill">判断题 · 第38题</p><h2 class="question">作风问题具有反复性和顽固性，因此贯彻中央八项规定精神必须持续发力、久久为功，一个节点一个节点坚守，不可能一蹴而就。</h2><div class="options"><label class="option"><input type="radio" name="static-judge-38" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-38" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-39"><p class="pill">判断题 · 第39题</p><h2 class="question">《中国共产党党员权利保障条例》规定，党员享有的党章规定的各项权利必须受到尊重和保护，党的任何一级组织、任何党员都无权剥夺。（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-39" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-39" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="judge-40"><p class="pill">判断题 · 第40题</p><h2 class="question">正风肃纪是全面从严治党的有力举措（）</h2><div class="options"><label class="option"><input type="radio" name="static-judge-40" value="A">A．对</label><label class="option"><input type="radio" name="static-judge-40" value="B">B．错</label></div><details><summary>查看题库答案</summary><p>A．对</p></details></article><article class="static-question" data-static-id="blank-1"><p class="pill">填空题 · 第1题</p><h2 class="question">申请加入中国共产党的条件之一，必须是年满十八岁的中国工人、农民、军人、知识分子和其他社会阶层的（）分子。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>先进</p></details></article><article class="static-question" data-static-id="blank-2"><p class="pill">填空题 · 第2题</p><h2 class="question">习近平总书记指出，作风问题核心是党同人民群众的关系问题。要坚决纠正形式主义、（）、享乐主义和奢靡之风，坚决破除特权思想、特权行为，坚决整治群众身边的腐败和不正之风，让人民群众不断看到实实在在的成效和变化。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>官僚主义</p></details></article><article class="static-question" data-static-id="blank-3"><p class="pill">填空题 · 第3题</p><h2 class="question">预备党员必须面向（）进行入党宣誓。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>党旗</p></details></article><article class="static-question" data-static-id="blank-4"><p class="pill">填空题 · 第4题</p><h2 class="question">党徽党旗表明中国共产党是中国（）阶级的先锋队，同时是中国人民和中华民族的先锋队。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>工人</p></details></article><article class="static-question" data-static-id="blank-5"><p class="pill">填空题 · 第5题</p><h2 class="question">党章是最根本的党内法规，是管党治党的总规矩，（）是党的各级组织和全体党员必须遵守的行为规则。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>党的纪律</p></details></article><article class="static-question" data-static-id="blank-6"><p class="pill">填空题 · 第6题</p><h2 class="question">在党内组织秘密集团或者组织其他分裂党的活动的，给予（）处分。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>开除党籍</p></details></article><article class="static-question" data-static-id="blank-7"><p class="pill">填空题 · 第7题</p><h2 class="question">党的七大确立（）为党的指导思想并写入《党章》。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>毛泽东思想</p></details></article><article class="static-question" data-static-id="blank-8"><p class="pill">填空题 · 第8题</p><h2 class="question">中国共产党党徽党旗制作、使用、管理必须坚持统一（）、统一规范。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>标准</p></details></article><article class="static-question" data-static-id="blank-9"><p class="pill">填空题 · 第9题</p><h2 class="question">（）是发展中国特色社会主义的强大动力。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>改革开放</p></details></article><article class="static-question" data-static-id="blank-10"><p class="pill">填空题 · 第10题</p><h2 class="question">党必须按照（）、协调各方的原则，在同级各种组织中发挥领导核心作用。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>总揽全局</p></details></article><article class="static-question" data-static-id="blank-11"><p class="pill">填空题 · 第11题</p><h2 class="question">党的根本宗旨是（）。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>全心全意为人民服务</p></details></article><article class="static-question" data-static-id="blank-12"><p class="pill">填空题 · 第12题</p><h2 class="question">无产阶级政党的第一个党纲是（）。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>共产党宣言</p></details></article><article class="static-question" data-static-id="blank-13"><p class="pill">填空题 · 第13题</p><h2 class="question">根据《中国共产党章程》，中国共产党党徽为（）和锤头的组成图案。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>镰刀</p></details></article><article class="static-question" data-static-id="blank-14"><p class="pill">填空题 · 第14题</p><h2 class="question">党组织对入党积极分子进行培养教育可以采取听（）、参加党内有关活动、分配一定的（）、集中（）等的方式进行。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>党课   社会工作   培训</p></details></article><article class="static-question" data-static-id="blank-15"><p class="pill">填空题 · 第15题</p><h2 class="question">《党章》明确规定，党必须在（）的范围内活动。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>宪法和法律</p></details></article><article class="static-question" data-static-id="blank-16"><p class="pill">填空题 · 第16题</p><h2 class="question">中国共产党的党徽党旗是中国共产党的象征和标志。维护党徽党旗的尊严，就是维护党的尊严，是各级党组织和每名党员必须履行的（）。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>政治责任</p></details></article><article class="static-question" data-static-id="blank-17"><p class="pill">填空题 · 第17题</p><h2 class="question">特殊情形需要同时悬挂中国共产党党旗和其他旗帜的，应当把党旗置于（）位置</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>首要</p></details></article><article class="static-question" data-static-id="blank-18"><p class="pill">填空题 · 第18题</p><h2 class="question">确定入党积极分子为发展对象，一般应经过党组织（）以上的培养教育和考察，完成了规定内容的培训教育，且符合《党章》规定的（）条件，才能确定为发展对象。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>一年   党员</p></details></article><article class="static-question" data-static-id="blank-19"><p class="pill">填空题 · 第19题</p><h2 class="question">根据《中共大连工业大学委员会发展党员工作实施细则》，入党积极分子应至少每（）向党支部和培养联系人进行1次书面思想汇报。</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>季度</p></details></article><article class="static-question" data-static-id="blank-20"><p class="pill">填空题 · 第20题</p><h2 class="question">全面从严治党的根本性任务是（）</h2><div class="options"><p>请先在纸上或心里填写，再展开答案核对。</p></div><details><summary>查看题库答案</summary><p>增强党性</p></details></article></details></section>
+  <div class="bottom-note"><span>✓ 答题后即时反馈</span><span>✓ 多选须全部选对</span><span>✓ 刷新后可继续</span></div>
+  <footer>题目与判分依据上传题库，判断题含 1 道已标注的补充题。<button id="reset" class="text-button">清空学习记录</button></footer>
+</main>
+<dialog id="infoDialog"><button class="close" id="closeInfo" aria-label="关闭">×</button><p class="eyebrow">关于这份练习</p><h2>题库说明</h2><p>已收录单选60道、多选45道、判断40道、填空20道，共165道。</p><p>原文判断题从第8题跳到第10题，实际有39道。第9题为依据原题库填空题第11题补充的判断题，题面已明确标注。单选第40题按原文顺序整理；重复的选项字母按排列顺序修正。</p><p>答案按原题库判定，没有对全部答案进行外部核验。多选第4题的原答案为ABCD，与题面“三会一课”的常见表述可能不一致，练习时会单独提醒，请向老师确认。</p><p>“查看答案”会记为待复习，重新答对后移出错题。填空忽略空格、标点、书名号，每个空仍需准确填写。</p><p>本文件包含全部题库、样式和答题功能，无需联网或登录。用浏览器打开即可练习。学习记录仅保存在当前浏览器，换设备、移动文件或清除浏览器数据后可能无法延续。</p><button class="primary" id="gotIt">知道了</button></dialog>
+<script>
+window.QUESTION_BANK = [
+  {
+    "id": "single-1",
+    "type": "single",
+    "number": 1,
+    "sourceNumber": 1,
+    "question": "《中国共产党章程》规定，党的最高理想和最终目标是实现（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "共产主义"
+      },
+      {
+        "key": "B",
+        "text": "中华民族伟大复兴"
+      },
+      {
+        "key": "C",
+        "text": "发展先进生产力"
+      },
+      {
+        "key": "D",
+        "text": "“中国梦”"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-2",
+    "type": "single",
+    "number": 2,
+    "sourceNumber": 2,
+    "question": "《中国共产党章程》规定，中国共产党党员是（）的有共产主义觉悟的先锋战士。",
+    "options": [
+      {
+        "key": "A",
+        "text": "中国工人阶级"
+      },
+      {
+        "key": "B",
+        "text": "中国无产阶级"
+      },
+      {
+        "key": "C",
+        "text": "中国先进阶级"
+      },
+      {
+        "key": "D",
+        "text": "中国劳动人民"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-3",
+    "type": "single",
+    "number": 3,
+    "sourceNumber": 3,
+    "question": "坚持（）高于一切，个人利益服从党和人民的利益，吃苦在前，享受在后，克己奉公，多做贡献。",
+    "options": [
+      {
+        "key": "A",
+        "text": "个人利益"
+      },
+      {
+        "key": "B",
+        "text": "局部利益"
+      },
+      {
+        "key": "C",
+        "text": "单位利益"
+      },
+      {
+        "key": "D",
+        "text": "党和人民的利益"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-4",
+    "type": "single",
+    "number": 4,
+    "sourceNumber": 4,
+    "question": "中国共产党党徽为镰刀和（）组成的图案。",
+    "options": [
+      {
+        "key": "A",
+        "text": "斧头"
+      },
+      {
+        "key": "B",
+        "text": "锄头"
+      },
+      {
+        "key": "C",
+        "text": "五星"
+      },
+      {
+        "key": "D",
+        "text": "锤头"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-5",
+    "type": "single",
+    "number": 5,
+    "sourceNumber": 5,
+    "question": "中国共产党党旗为旗面缀有（）党徽图案的红旗。",
+    "options": [
+      {
+        "key": "A",
+        "text": "红色"
+      },
+      {
+        "key": "B",
+        "text": "金黄色"
+      },
+      {
+        "key": "C",
+        "text": "橙色"
+      },
+      {
+        "key": "D",
+        "text": "白色"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-6",
+    "type": "single",
+    "number": 6,
+    "sourceNumber": 6,
+    "question": "党的基层委员会、总支部委员会、支部委员会每届任期（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "2年"
+      },
+      {
+        "key": "B",
+        "text": "3年"
+      },
+      {
+        "key": "C",
+        "text": "3年至5年"
+      },
+      {
+        "key": "D",
+        "text": "5年"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-7",
+    "type": "single",
+    "number": 7,
+    "sourceNumber": 7,
+    "question": "党员如果没有正当理由，连续（）不参加党的组织生活，或不交纳党费，或不做党所分配的工作，就被认为是自行脱党。",
+    "options": [
+      {
+        "key": "A",
+        "text": "3个月"
+      },
+      {
+        "key": "B",
+        "text": "6个月"
+      },
+      {
+        "key": "C",
+        "text": "12个月"
+      },
+      {
+        "key": "D",
+        "text": "24个月"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-8",
+    "type": "single",
+    "number": 8,
+    "sourceNumber": 8,
+    "question": "党的纪律是党的（）必须遵守的行为规则，是维护党的团结统一、完成党的任务的保证。",
+    "options": [
+      {
+        "key": "A",
+        "text": "基层组织"
+      },
+      {
+        "key": "B",
+        "text": "所有干部"
+      },
+      {
+        "key": "C",
+        "text": "各级组织和全体党员"
+      },
+      {
+        "key": "D",
+        "text": "领导干部"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-9",
+    "type": "single",
+    "number": 9,
+    "sourceNumber": 9,
+    "question": "党内严格禁止用违反（）的手段对待党员，严格禁止打击报复和诬告陷害。违反这些规定的组织或个人必须受到党的纪律和国家法律的追究。",
+    "options": [
+      {
+        "key": "A",
+        "text": "规章"
+      },
+      {
+        "key": "B",
+        "text": "道德"
+      },
+      {
+        "key": "C",
+        "text": "党章和国家法律"
+      },
+      {
+        "key": "D",
+        "text": "政策"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-10",
+    "type": "single",
+    "number": 10,
+    "sourceNumber": 10,
+    "question": "党的最高领导机关是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的全国代表大会和它所产生的中央委员会"
+      },
+      {
+        "key": "B",
+        "text": "党的全国代表大会和党的地方各级代表大会"
+      },
+      {
+        "key": "C",
+        "text": "党的中央政治局及其常务委员会"
+      },
+      {
+        "key": "D",
+        "text": "党的全国代表会议"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-11",
+    "type": "single",
+    "number": 11,
+    "sourceNumber": 11,
+    "question": "中央八项规定的核心精神是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "深化反腐败斗争，查处大案要案"
+      },
+      {
+        "key": "B",
+        "text": "改进工作作风、密切联系群众"
+      },
+      {
+        "key": "C",
+        "text": "规范公务支出，厉行勤俭节约"
+      },
+      {
+        "key": "D",
+        "text": "精简文件简报，改进会风文风"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-12",
+    "type": "single",
+    "number": 12,
+    "sourceNumber": 12,
+    "question": "二十大报告指出，打铁必须自身硬，提出和落实新时代党的建设总要求，以党的（）统领党的建设各项工作。",
+    "options": [
+      {
+        "key": "A",
+        "text": "政治建设"
+      },
+      {
+        "key": "B",
+        "text": "文化建设"
+      },
+      {
+        "key": "C",
+        "text": "生态建设"
+      },
+      {
+        "key": "D",
+        "text": "思想建设"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-13",
+    "type": "single",
+    "number": 13,
+    "sourceNumber": 13,
+    "question": "党的()，是党的全部工作和战斗力的基础。",
+    "options": [
+      {
+        "key": "A",
+        "text": "中央组织"
+      },
+      {
+        "key": "B",
+        "text": "地方组织"
+      },
+      {
+        "key": "C",
+        "text": "基层组织"
+      },
+      {
+        "key": "D",
+        "text": "全体党员"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-14",
+    "type": "single",
+    "number": 14,
+    "sourceNumber": 14,
+    "question": "党徽党旗及其图案可以用于下列哪个活动。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "商标、授予专利权的外观设计和商业广告"
+      },
+      {
+        "key": "B",
+        "text": "私人活动"
+      },
+      {
+        "key": "C",
+        "text": "个人日常用品、日常生活的陈设布置"
+      },
+      {
+        "key": "D",
+        "text": "党的基层组织开展主题党日"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-15",
+    "type": "single",
+    "number": 15,
+    "sourceNumber": 15,
+    "question": "制作非通用尺度的党徽党旗，在规定情形外使用党徽党旗及其图案的，应当报（）党委组织部门批准。",
+    "options": [
+      {
+        "key": "A",
+        "text": "省级以上"
+      },
+      {
+        "key": "B",
+        "text": "市级以上"
+      },
+      {
+        "key": "C",
+        "text": "县级以上"
+      },
+      {
+        "key": "D",
+        "text": "乡级以上"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-16",
+    "type": "single",
+    "number": 16,
+    "sourceNumber": 16,
+    "question": "“开天辟地的大事变”指的是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "五四运动"
+      },
+      {
+        "key": "B",
+        "text": "新文化运动"
+      },
+      {
+        "key": "C",
+        "text": "新中国成立"
+      },
+      {
+        "key": "D",
+        "text": "中国共产党成立"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-17",
+    "type": "single",
+    "number": 17,
+    "sourceNumber": 17,
+    "question": "政治审查的基本方法是：同本人谈话、查阅有关档案材料、找有关单位和人员了解情况以及必要的（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "函调"
+      },
+      {
+        "key": "B",
+        "text": "外调"
+      },
+      {
+        "key": "C",
+        "text": "函调或外调"
+      },
+      {
+        "key": "D",
+        "text": "实地走访"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-18",
+    "type": "single",
+    "number": 18,
+    "sourceNumber": 18,
+    "question": "根据《中共大连工业大学委员会发展党员工作实施细则》，发展党员工作的总要求是：",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持标准、保证质量、改善结构、慎重发展"
+      },
+      {
+        "key": "B",
+        "text": "控制总量、优化结构、提高质量、发挥作用"
+      },
+      {
+        "key": "C",
+        "text": "公平公正、程序规范、透明公开、择优发展"
+      },
+      {
+        "key": "D",
+        "text": "思想引领、政治合格、纪律严明、作用突出"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-19",
+    "type": "single",
+    "number": 19,
+    "sourceNumber": 19,
+    "question": "在考试、录取工作中，有泄露试题、考场舞弊、涂改考卷、违规录取等违反有关规定行为的，给予警告或者严重警告处分；情节较重的，给予（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "给予警告或严重警告处分"
+      },
+      {
+        "key": "B",
+        "text": "给予撤销党内职务或留党察看"
+      },
+      {
+        "key": "C",
+        "text": "给予留党察看或开除党籍"
+      },
+      {
+        "key": "D",
+        "text": "不予追究"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-20",
+    "type": "single",
+    "number": 20,
+    "sourceNumber": 20,
+    "question": "受到留党察看处分的党员，恢复党员权利后（）内，不得在党内担任和向党外组织推荐担任与其原任职务相当或者高于其原任职务的职务。",
+    "options": [
+      {
+        "key": "A",
+        "text": "一年"
+      },
+      {
+        "key": "B",
+        "text": "一年半"
+      },
+      {
+        "key": "C",
+        "text": "两年"
+      },
+      {
+        "key": "D",
+        "text": "五年"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-21",
+    "type": "single",
+    "number": 21,
+    "sourceNumber": 21,
+    "question": "（）是我们立党立国、兴党兴国的根本指导思想。",
+    "options": [
+      {
+        "key": "A",
+        "text": "为人民服务"
+      },
+      {
+        "key": "B",
+        "text": "以人民为中心"
+      },
+      {
+        "key": "C",
+        "text": "社会主义"
+      },
+      {
+        "key": "D",
+        "text": "马克思主义"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-22",
+    "type": "single",
+    "number": 22,
+    "sourceNumber": 22,
+    "question": "违背社会公序良俗，在公共场所有不当行为，造成不良影响的，给予（）处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。",
+    "options": [
+      {
+        "key": "A",
+        "text": "警告或严重警告"
+      },
+      {
+        "key": "B",
+        "text": "撤销党内职务"
+      },
+      {
+        "key": "C",
+        "text": "留党察看"
+      },
+      {
+        "key": "D",
+        "text": "开除党籍"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-23",
+    "type": "single",
+    "number": 23,
+    "sourceNumber": 23,
+    "question": "党组织在纪律审查中发现党员严重违纪涉嫌违法犯罪的，原则上先做出（）决定，并按照规定给予政务处分后，再移送有关国家机关依法处理。",
+    "options": [
+      {
+        "key": "A",
+        "text": "行政处罚"
+      },
+      {
+        "key": "B",
+        "text": "政纪处分"
+      },
+      {
+        "key": "C",
+        "text": "组织处理"
+      },
+      {
+        "key": "D",
+        "text": "党纪处分"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-24",
+    "type": "single",
+    "number": 24,
+    "sourceNumber": 24,
+    "question": "一切为了群众，一切依靠群众，从群众中来，到群众中去，把党的正确主张变为群众的自觉行动。这是党章对（）的表述。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的思想路线"
+      },
+      {
+        "key": "B",
+        "text": "党的政治路线"
+      },
+      {
+        "key": "C",
+        "text": "党的群众路线"
+      },
+      {
+        "key": "D",
+        "text": "党的组织路线"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-25",
+    "type": "single",
+    "number": 25,
+    "sourceNumber": 25,
+    "question": "《党章》明确规定，党除了（），没有自己特殊的利益。",
+    "options": [
+      {
+        "key": "A",
+        "text": "工人阶级的利益"
+      },
+      {
+        "key": "B",
+        "text": "最广大人民群众的利益"
+      },
+      {
+        "key": "C",
+        "text": "工人阶级和最广大人民群众的利益"
+      },
+      {
+        "key": "D",
+        "text": "农民阶级的利益"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-26",
+    "type": "single",
+    "number": 26,
+    "sourceNumber": 26,
+    "question": "《党章》明确规定，党必须在（）的范围内活动。",
+    "options": [
+      {
+        "key": "A",
+        "text": "法律和法规"
+      },
+      {
+        "key": "B",
+        "text": "法律和党纪"
+      },
+      {
+        "key": "C",
+        "text": "宪法和法律"
+      },
+      {
+        "key": "D",
+        "text": "党纪和国法"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-27",
+    "type": "single",
+    "number": 27,
+    "sourceNumber": 27,
+    "question": "入党介绍人的任务是认真了解申请人的思想、品质、经历和工作表现，向他解释（），说明党员的条件、义务和权利，并向党组织作出负责的报告。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的路线方针政策"
+      },
+      {
+        "key": "B",
+        "text": "党的纲领和党的章程"
+      },
+      {
+        "key": "C",
+        "text": "党的历史"
+      },
+      {
+        "key": "D",
+        "text": "党的路程"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-28",
+    "type": "single",
+    "number": 28,
+    "sourceNumber": 28,
+    "question": "发展党员，必须坚持（）的原则。",
+    "options": [
+      {
+        "key": "A",
+        "text": "集体吸收"
+      },
+      {
+        "key": "B",
+        "text": "个别吸收"
+      },
+      {
+        "key": "C",
+        "text": "相互吸收"
+      },
+      {
+        "key": "D",
+        "text": "独立吸收"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-29",
+    "type": "single",
+    "number": 29,
+    "sourceNumber": 29,
+    "question": "入党誓词如下：我志愿加入中国共产党,拥护党的纲领,（），履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切,永不叛党。",
+    "options": [
+      {
+        "key": "A",
+        "text": "遵守党的章程"
+      },
+      {
+        "key": "B",
+        "text": "遵守国家的法律"
+      },
+      {
+        "key": "C",
+        "text": "遵守党的纪律"
+      },
+      {
+        "key": "D",
+        "text": "遵守社会规则"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-30",
+    "type": "single",
+    "number": 30,
+    "sourceNumber": 30,
+    "question": "每个党员，不论职务高低，都必须编入党的一个支部、小组或其他特定组织，参加党的（），接受党内外群众的监督。",
+    "options": [
+      {
+        "key": "A",
+        "text": "民主生活"
+      },
+      {
+        "key": "B",
+        "text": "组织生活"
+      },
+      {
+        "key": "C",
+        "text": "学习活动"
+      },
+      {
+        "key": "D",
+        "text": "民主生活会"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-31",
+    "type": "single",
+    "number": 31,
+    "sourceNumber": 31,
+    "question": "劝党员退党,简称“劝退”，是指党员缺乏革命意志，（），不符合党员条件，经党的支部对其进行教育并在限期内仍无改正和转变的,党组织应当劝其退党。",
+    "options": [
+      {
+        "key": "A",
+        "text": "不履行党员义务"
+      },
+      {
+        "key": "B",
+        "text": "不行使党员权利"
+      },
+      {
+        "key": "C",
+        "text": "不参加党的组织生活"
+      },
+      {
+        "key": "D",
+        "text": "不缴纳党费"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-32",
+    "type": "single",
+    "number": 32,
+    "sourceNumber": 32,
+    "question": "党的民主集中制的基本原则之一是“四个服从”，即党员个人服从党的组织,（）,下级组织服从上级组织，全党各个组织和全体党员服从党的全国代表大会和中央委员会。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党委委员服从党委书记"
+      },
+      {
+        "key": "B",
+        "text": "少数服从多数"
+      },
+      {
+        "key": "C",
+        "text": "普通党员服从党组织书记"
+      },
+      {
+        "key": "D",
+        "text": "综合平衡不同意见"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-33",
+    "type": "single",
+    "number": 33,
+    "sourceNumber": 33,
+    "question": "党组织讨论决定问题，必须执行（）的原则。",
+    "options": [
+      {
+        "key": "A",
+        "text": "个人服从组织"
+      },
+      {
+        "key": "B",
+        "text": "少数服从多数"
+      },
+      {
+        "key": "C",
+        "text": "下级服从上级"
+      },
+      {
+        "key": "D",
+        "text": "上级指导下级"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-34",
+    "type": "single",
+    "number": 34,
+    "sourceNumber": 34,
+    "question": "《党章》规定，在党的纪律面前（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党员和群众一律平等"
+      },
+      {
+        "key": "B",
+        "text": "不同级别的党员干部有所区别"
+      },
+      {
+        "key": "C",
+        "text": "所有党员一律平等"
+      },
+      {
+        "key": "D",
+        "text": "普通党员一律平等"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-35",
+    "type": "single",
+    "number": 35,
+    "sourceNumber": 35,
+    "question": "党的各级组织和每一个党员都要维护党徽党旗的（），要按照规定制作和使用党徽党旗。",
+    "options": [
+      {
+        "key": "A",
+        "text": "形象"
+      },
+      {
+        "key": "B",
+        "text": "尊严"
+      },
+      {
+        "key": "C",
+        "text": "声誉"
+      },
+      {
+        "key": "D",
+        "text": "完整"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-36",
+    "type": "single",
+    "number": 36,
+    "sourceNumber": 36,
+    "question": "《关于新形势下党内政治生活的若干准则》指出，加强和规范党内政治生活，必须以（）为根本遵循。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党章"
+      },
+      {
+        "key": "B",
+        "text": "法律"
+      },
+      {
+        "key": "C",
+        "text": "准则"
+      },
+      {
+        "key": "D",
+        "text": "宪法"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-37",
+    "type": "single",
+    "number": 37,
+    "sourceNumber": 37,
+    "question": "《关于新形势下党内政治生活的若干准则》指出，中国共产党人的精神支柱和政治灵魂是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "马克思列宁主义"
+      },
+      {
+        "key": "B",
+        "text": "共产主义远大理想"
+      },
+      {
+        "key": "C",
+        "text": "中国特色社会主义共同理想"
+      },
+      {
+        "key": "D",
+        "text": "共产主义远大理想和中国特色社会主义共同理想"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-38",
+    "type": "single",
+    "number": 38,
+    "sourceNumber": 38,
+    "question": "《中国共产党廉洁自律准则》要求，党员要坚持公私分明,（），克己奉公。",
+    "options": [
+      {
+        "key": "A",
+        "text": "先人后己"
+      },
+      {
+        "key": "B",
+        "text": "公私兼顾"
+      },
+      {
+        "key": "C",
+        "text": "舍己为公"
+      },
+      {
+        "key": "D",
+        "text": "先公后私"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-39",
+    "type": "single",
+    "number": 39,
+    "sourceNumber": 39,
+    "question": "《中国共产党纪律处分条例》规定，党的纪律是党的各级组织和全体党员（）遵守的行为规则。",
+    "options": [
+      {
+        "key": "A",
+        "text": "必须"
+      },
+      {
+        "key": "B",
+        "text": "倡导"
+      },
+      {
+        "key": "C",
+        "text": "一般"
+      },
+      {
+        "key": "D",
+        "text": "特殊"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-40",
+    "type": "single",
+    "number": 40,
+    "sourceNumber": 41,
+    "question": "习近平总书记指出，坚持一个中国原则和“九二共识”,推动两岸关系和平发展，加强两岸（）交流合作，实现两岸领导人历史性会晤。妥善应对台湾局势变化，坚决反对和遏制“台独”分裂势力，有力维护台海和平稳定。",
+    "options": [
+      {
+        "key": "A",
+        "text": "政治文化"
+      },
+      {
+        "key": "B",
+        "text": "经济文化"
+      },
+      {
+        "key": "C",
+        "text": "政治互动"
+      },
+      {
+        "key": "D",
+        "text": "经济贸易"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-41",
+    "type": "single",
+    "number": 41,
+    "sourceNumber": 41,
+    "question": "习近平总书记指出，实现伟大梦想，必须推进伟大事业。（）是激励全党全国各族人民奋勇前进的强大精神力量。",
+    "options": [
+      {
+        "key": "A",
+        "text": "中国特色社会主义道路"
+      },
+      {
+        "key": "B",
+        "text": "中国特色社会主义理论体系"
+      },
+      {
+        "key": "C",
+        "text": "中国特色社会主义制度"
+      },
+      {
+        "key": "D",
+        "text": "中国特色社会主义文化"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-42",
+    "type": "single",
+    "number": 42,
+    "sourceNumber": 42,
+    "question": "贯彻落实习近平新时代中国特色社会主义思想，必须坚持人民当家作主。坚持（）、人民当家作主、依法治国有机统一是社会主义政治发展的必然要求。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的执政"
+      },
+      {
+        "key": "B",
+        "text": "党的权威"
+      },
+      {
+        "key": "C",
+        "text": "党的领导"
+      },
+      {
+        "key": "D",
+        "text": "党的建设"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-43",
+    "type": "single",
+    "number": 43,
+    "sourceNumber": 43,
+    "question": "贯彻落实习近平新时代中国特色社会主义思想，必须坚持推动构建（）。中国人民的梦想同各国人民的梦想息息相通，实现中国梦离不开和平的国际环境和稳定的国际秩序。",
+    "options": [
+      {
+        "key": "A",
+        "text": "全球命运共同体"
+      },
+      {
+        "key": "B",
+        "text": "国家命运共同体"
+      },
+      {
+        "key": "C",
+        "text": "人类命运共同体"
+      },
+      {
+        "key": "D",
+        "text": "经济命运共同体"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-44",
+    "type": "single",
+    "number": 44,
+    "sourceNumber": 44,
+    "question": "习近平总书记指出，我国是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家，国家一切权力属于（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "工人"
+      },
+      {
+        "key": "B",
+        "text": "人民"
+      },
+      {
+        "key": "C",
+        "text": "农民"
+      },
+      {
+        "key": "D",
+        "text": "社会新阶层"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-45",
+    "type": "single",
+    "number": 45,
+    "sourceNumber": 45,
+    "question": "习近平总书记强调，坚持党的领导，是社会主义法治的（）要求，是全面推进依法治国题中应有之义。",
+    "options": [
+      {
+        "key": "A",
+        "text": "一般"
+      },
+      {
+        "key": "B",
+        "text": "重要"
+      },
+      {
+        "key": "C",
+        "text": "根本"
+      },
+      {
+        "key": "D",
+        "text": "基本"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-46",
+    "type": "single",
+    "number": 46,
+    "sourceNumber": 46,
+    "question": "习近平总书记强调，司法是维护社会公平正义的最后一道防线。（）是司法的灵魂和生命。",
+    "options": [
+      {
+        "key": "A",
+        "text": "公开"
+      },
+      {
+        "key": "B",
+        "text": "公平"
+      },
+      {
+        "key": "C",
+        "text": "公正"
+      },
+      {
+        "key": "D",
+        "text": "公示"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-47",
+    "type": "single",
+    "number": 47,
+    "sourceNumber": 47,
+    "question": "习近平总书记强调，做好新形势下统战工作，最根本的是要（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "掌握规律"
+      },
+      {
+        "key": "B",
+        "text": "坚持原则"
+      },
+      {
+        "key": "C",
+        "text": "讲究方法"
+      },
+      {
+        "key": "D",
+        "text": "坚持党的领导"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-48",
+    "type": "single",
+    "number": 48,
+    "sourceNumber": 48,
+    "question": "习近平总书记在庆祝改革开放40周年大会上的讲话强调，改革开放40年的实践启示我们：方向决定（）,道路决定（）。我们要把命运掌握在自己手中，就要有志不改、道不变的坚定。",
+    "options": [
+      {
+        "key": "A",
+        "text": "命运前途"
+      },
+      {
+        "key": "B",
+        "text": "前途命运"
+      },
+      {
+        "key": "C",
+        "text": "选择未来"
+      },
+      {
+        "key": "D",
+        "text": "未来选择"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-49",
+    "type": "single",
+    "number": 49,
+    "sourceNumber": 49,
+    "question": "习近平总书记指出，必须推进马克思主义中国化时代化大众化，建设具有强大凝聚力和引领力的社会主义（），使全体人民在理想信念、价值理念、道德观念上紧紧团结在一起。",
+    "options": [
+      {
+        "key": "A",
+        "text": "意识形态"
+      },
+      {
+        "key": "B",
+        "text": "法律形态"
+      },
+      {
+        "key": "C",
+        "text": "社会形态"
+      },
+      {
+        "key": "D",
+        "text": "文学形态"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-50",
+    "type": "single",
+    "number": 50,
+    "sourceNumber": 50,
+    "question": "习近平总书记指出，社会主义文艺必须坚持以（）为中心的创作导向，在深入生活、扎根人民中进行无愧于时代的文艺创造。",
+    "options": [
+      {
+        "key": "A",
+        "text": "经济"
+      },
+      {
+        "key": "B",
+        "text": "环境"
+      },
+      {
+        "key": "C",
+        "text": "人民"
+      },
+      {
+        "key": "D",
+        "text": "政府"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-51",
+    "type": "single",
+    "number": 51,
+    "sourceNumber": 51,
+    "question": "习近平总书记指出，必须始终把人民利益摆在至高无上的地位，让（）更多更公平惠及全体人民，朝着实现全体人民共同富裕不断迈进。",
+    "options": [
+      {
+        "key": "A",
+        "text": "改革发展成果"
+      },
+      {
+        "key": "B",
+        "text": "教育发展成果"
+      },
+      {
+        "key": "C",
+        "text": "精神文明成果"
+      },
+      {
+        "key": "D",
+        "text": "物质文明成果"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-52",
+    "type": "single",
+    "number": 52,
+    "sourceNumber": 52,
+    "question": "习近平总书记强调，国家安全工作归根结底是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "维护国家安全"
+      },
+      {
+        "key": "B",
+        "text": "保障人民利益"
+      },
+      {
+        "key": "C",
+        "text": "提升国家地位"
+      },
+      {
+        "key": "D",
+        "text": "建设安全中国"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "single-53",
+    "type": "single",
+    "number": 53,
+    "sourceNumber": 53,
+    "question": "习近平总书记强调，做好国家安全工作的根本原则是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "保障人权"
+      },
+      {
+        "key": "B",
+        "text": "坚持党对国家安全工作的管理"
+      },
+      {
+        "key": "C",
+        "text": "共同安全"
+      },
+      {
+        "key": "D",
+        "text": "坚持党对国家安全工作的领导"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-54",
+    "type": "single",
+    "number": 54,
+    "sourceNumber": 54,
+    "question": "习近平总书记指出，推进祖国统一,必须,坚持一个中国的原则，坚持“九二共识”,推动两岸关系和平发展,深化两岸经济合作和文化往来，推动两岸同胞（），共同为实现中,华民族伟大复兴而奋斗。",
+    "options": [
+      {
+        "key": "A",
+        "text": "共同反对一切分裂国家的活动"
+      },
+      {
+        "key": "B",
+        "text": "包容互惠、开放创新"
+      },
+      {
+        "key": "C",
+        "text": "和而不同、兼收并蓄的交流"
+      },
+      {
+        "key": "D",
+        "text": "奉行互利共赢的发展道路"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-55",
+    "type": "single",
+    "number": 55,
+    "sourceNumber": 55,
+    "question": "习近平总书记指出，解决台湾问题、实现祖国完全统一，是全体中华儿女（）,是中华民族（）所在。",
+    "options": [
+      {
+        "key": "A",
+        "text": "未来愿望根本利益"
+      },
+      {
+        "key": "B",
+        "text": "共同愿望现实利益"
+      },
+      {
+        "key": "C",
+        "text": "未来愿望现实利益"
+      },
+      {
+        "key": "D",
+        "text": "共同愿望根本利益"
+      }
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "single-56",
+    "type": "single",
+    "number": 56,
+    "sourceNumber": 56,
+    "question": "习近平总书记指出，（）是两岸关系的政治基础。",
+    "options": [
+      {
+        "key": "A",
+        "text": "“九二共识”"
+      },
+      {
+        "key": "B",
+        "text": "反对“台独”"
+      },
+      {
+        "key": "C",
+        "text": "一个中国原则"
+      },
+      {
+        "key": "D",
+        "text": "和平统一"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-57",
+    "type": "single",
+    "number": 57,
+    "sourceNumber": 57,
+    "question": "习近平总书记指出，弘扬马克思主义学风,推进“两学一做”学习教育常态化制度化，以县处级以上领导干部为重点，在全党开展（）主题教育，用党的创新理论武装头脑，推动全党更加自觉地为实现新时代党的历史使命不懈奋斗。",
+    "options": [
+      {
+        "key": "A",
+        "text": "“不忘初心、牢记使命”"
+      },
+      {
+        "key": "B",
+        "text": "“为民务实清廉”"
+      },
+      {
+        "key": "C",
+        "text": "“三严三实”"
+      },
+      {
+        "key": "D",
+        "text": "“不忘初心、继续前进”"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-58",
+    "type": "single",
+    "number": 58,
+    "sourceNumber": 58,
+    "question": "中国共产党要领导全国各族人民实现“两个一百年”奋斗目标,实现中华民族伟大复兴的中国梦，必须紧密围绕党的基本路线，加强党的长期执政能力建设、（）建设。",
+    "options": [
+      {
+        "key": "A",
+        "text": "先进性"
+      },
+      {
+        "key": "B",
+        "text": "纯洁性"
+      },
+      {
+        "key": "C",
+        "text": "先进性和纯洁性"
+      },
+      {
+        "key": "D",
+        "text": "精神文明"
+      }
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "single-59",
+    "type": "single",
+    "number": 59,
+    "sourceNumber": 59,
+    "question": "近平总书记强调，在所有党的纪律和规矩中，第一位的是（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "政治纪律和政治规矩"
+      },
+      {
+        "key": "B",
+        "text": "组织纪律和组织规矩"
+      },
+      {
+        "key": "C",
+        "text": "生活纪律和生活规矩"
+      },
+      {
+        "key": "D",
+        "text": "工作纪律和工作规矩"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "single-60",
+    "type": "single",
+    "number": 60,
+    "sourceNumber": 60,
+    "question": "习近平总书记强调，作风问题本质上是（）问题。",
+    "options": [
+      {
+        "key": "A",
+        "text": "文化"
+      },
+      {
+        "key": "B",
+        "text": "党性"
+      },
+      {
+        "key": "C",
+        "text": "履职"
+      },
+      {
+        "key": "D",
+        "text": "观念"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "multiple-1",
+    "type": "multiple",
+    "number": 1,
+    "sourceNumber": 1,
+    "question": "《党章》明确规定，各项工作都要把（）作为总的出发点和检验标准。",
+    "options": [
+      {
+        "key": "A",
+        "text": "有利于发展社会主义社会的生产力"
+      },
+      {
+        "key": "B",
+        "text": "有利于増强社会主义国家的综合国力"
+      },
+      {
+        "key": "C",
+        "text": "有利于改善生活环境"
+      },
+      {
+        "key": "D",
+        "text": "有利于提高人民的生活水平"
+      }
+    ],
+    "answer": "ABD"
+  },
+  {
+    "id": "multiple-2",
+    "type": "multiple",
+    "number": 2,
+    "sourceNumber": 2,
+    "question": "《党章》规定，选举人有（）的权利。任何组织和个人不得以任何方式强迫选举人选举或不选举某个人。",
+    "options": [
+      {
+        "key": "A",
+        "text": "了解候选人情况"
+      },
+      {
+        "key": "B",
+        "text": "要求改变候选人"
+      },
+      {
+        "key": "C",
+        "text": "不选任何一个候选人和另选他人"
+      },
+      {
+        "key": "D",
+        "text": "要求候选人必须作出说明"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-3",
+    "type": "multiple",
+    "number": 3,
+    "sourceNumber": 3,
+    "question": "党支部是党的基础组织，担负直接教育党员、管理党员、监督党员和（）的职责。",
+    "options": [
+      {
+        "key": "A",
+        "text": "组织群众"
+      },
+      {
+        "key": "B",
+        "text": "宣传群众"
+      },
+      {
+        "key": "C",
+        "text": "凝聚群众"
+      },
+      {
+        "key": "D",
+        "text": "服务群众"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-4",
+    "type": "multiple",
+    "number": 4,
+    "sourceNumber": 4,
+    "question": "《关于新形势下党内政治生活的若干准则》强调，严格党的组织生活制度，必须坚持“三会一课”制度。党员必须参加（）和上党课，党支部要定期召开支部委员会会议。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党员大会"
+      },
+      {
+        "key": "B",
+        "text": "中心组学习（扩大）会"
+      },
+      {
+        "key": "C",
+        "text": "党小组会"
+      },
+      {
+        "key": "D",
+        "text": "党员代表会议"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-5",
+    "type": "multiple",
+    "number": 5,
+    "sourceNumber": 5,
+    "question": "《中国共产党党员权利保障条例》规定，对于有侵犯党员权利行为的党员，其所在党组织或者上级党组织可以釆取哪些方式给予处理（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "责令停止侵权行为"
+      },
+      {
+        "key": "B",
+        "text": "责令赔礼道歉"
+      },
+      {
+        "key": "C",
+        "text": "责令作出检查"
+      },
+      {
+        "key": "D",
+        "text": "诫勉谈话或者通报批评"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-6",
+    "type": "multiple",
+    "number": 6,
+    "sourceNumber": 6,
+    "question": "以下应当使用党旗的情形是（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "举行新党员入党宣誓仪式，组织党员重温入党誓词；"
+      },
+      {
+        "key": "B",
+        "text": "党内举行重大庆祝、纪念活动；"
+      },
+      {
+        "key": "C",
+        "text": "党的中央和地方委员会及其工作部门、党的中央和地方委员会在特定地域派出的代表机关及其工作部门、党的纪律检查机关、党组的会议室。"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-7",
+    "type": "multiple",
+    "number": 7,
+    "sourceNumber": 7,
+    "question": "习近平新时代中国特色社会主义思想，是（），是党和国家必须长期坚持的指导思想。",
+    "options": [
+      {
+        "key": "A",
+        "text": "马克思主义中国化最新成果"
+      },
+      {
+        "key": "B",
+        "text": "当代中国马克思主义、21世纪马克思主义"
+      },
+      {
+        "key": "C",
+        "text": "党和人民实践经验和集体智慧的结晶"
+      },
+      {
+        "key": "D",
+        "text": "中国特色社会主义理论体系的重要组成部分"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-8",
+    "type": "multiple",
+    "number": 8,
+    "sourceNumber": 8,
+    "question": "中国共产党党徽党旗及其图案不得用于（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "商标、授予专利权的外观设计和商业广告"
+      },
+      {
+        "key": "B",
+        "text": "私人活动；私人场所、个人网络空间的标识物"
+      },
+      {
+        "key": "C",
+        "text": "个人日常用品、日常生活的陈设布置"
+      },
+      {
+        "key": "D",
+        "text": "其他不适宜的场所、情形和环境"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-9",
+    "type": "multiple",
+    "number": 9,
+    "sourceNumber": 9,
+    "question": "各项工作都要把（）作为总的出发点和检验标准，尊重劳动、尊重知识、尊重人才、尊重创造，做到发展为了人民、发展依靠人民、发展成果由人民共享。",
+    "options": [
+      {
+        "key": "A",
+        "text": "有利于发展社会主义社会的生产力"
+      },
+      {
+        "key": "B",
+        "text": "有利于增强社会主义国家的综合国力"
+      },
+      {
+        "key": "C",
+        "text": "有利于提高人民的生活水平"
+      },
+      {
+        "key": "D",
+        "text": "有利于提高国际地位"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-10",
+    "type": "multiple",
+    "number": 10,
+    "sourceNumber": 10,
+    "question": "以下叙述符合《中国共产党党徽党旗条例》要求的是（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "不得在党徽党旗上添加任何文字、符号和图案等"
+      },
+      {
+        "key": "B",
+        "text": "不得使用破损、污损、褪色的党徽党旗"
+      },
+      {
+        "key": "C",
+        "text": "不得制作使用任何不符合本条例所附制法说明的党徽党旗"
+      },
+      {
+        "key": "D",
+        "text": "不得倒挂、倒插或者以其他有损党徽党旗尊严的方式升挂、使用党徽党旗"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-11",
+    "type": "multiple",
+    "number": 11,
+    "sourceNumber": 11,
+    "question": "中国共产党同全国各民族工人、农民、知识分子团结在一起，同各民主党派、无党派人士、各民族的爱国力量团结在一起，进一步发展和壮大由（）组成的最广泛的爱国统一战线。",
+    "options": [
+      {
+        "key": "A",
+        "text": "全体社会主义劳动者"
+      },
+      {
+        "key": "B",
+        "text": "社会主义事业的建设者"
+      },
+      {
+        "key": "C",
+        "text": "拥护社会主义的爱国者"
+      },
+      {
+        "key": "D",
+        "text": "拥护祖国统一和致力于中华民族伟大复兴的爱国者"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-12",
+    "type": "multiple",
+    "number": 12,
+    "sourceNumber": 12,
+    "question": "有下列情形之一的，可以从轻或者减轻处分。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "主动交代本人应当受到党纪处分的问题的"
+      },
+      {
+        "key": "B",
+        "text": "在组织核实、立案审查过程中，能够配合核实审查工作如实说明本人违纪违法事实的"
+      },
+      {
+        "key": "C",
+        "text": "检举同案人或者其他人应当受到党纪处分或者法律追究的问题，经查证属实的"
+      },
+      {
+        "key": "D",
+        "text": "主动挽回损失、消除不良影响或者有效阻止危害结果发生的"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-13",
+    "type": "multiple",
+    "number": 13,
+    "sourceNumber": 13,
+    "question": "违反民主集中制原则，()给予警告或者严重警告处分;情节严重的，给予撤销党内职务或者留党察看处分。",
+    "options": [
+      {
+        "key": "A",
+        "text": "拒不执行或者擅自改变党组织做出的重大决定的"
+      },
+      {
+        "key": "B",
+        "text": "违反议事规则，个人或者少数人决定重大问题的"
+      },
+      {
+        "key": "C",
+        "text": "故意规避集体决策，决定重大事项、重要干部任免、重要项目安排和大额资金使用的"
+      },
+      {
+        "key": "D",
+        "text": "借集体决策名义集体违规的"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-14",
+    "type": "multiple",
+    "number": 14,
+    "sourceNumber": 14,
+    "question": "关于习近平新时代中国特色社会主义思想重大意义，理解正确的有（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "是新时代中国共产党人的思想旗帜"
+      },
+      {
+        "key": "B",
+        "text": "为发展马克思主义作出了中国的原创性贡献"
+      },
+      {
+        "key": "C",
+        "text": "是国家政治生活和社会生活的根本指针"
+      },
+      {
+        "key": "D",
+        "text": "为建设美好世界贡献了中国智慧、中国方案"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-15",
+    "type": "multiple",
+    "number": 15,
+    "sourceNumber": 15,
+    "question": "对抗组织审查，有下列行为之一的，给予警告或者严重警告处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "串供或者伪造、销毁、转移、隐匿证据的"
+      },
+      {
+        "key": "B",
+        "text": "阻止他人揭发检举、提供证据材料的"
+      },
+      {
+        "key": "C",
+        "text": "包庇同案人员的"
+      },
+      {
+        "key": "D",
+        "text": "向组织提供虚假情况，掩盖事实的"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-16",
+    "type": "multiple",
+    "number": 16,
+    "sourceNumber": 16,
+    "question": "中国产生了共产党，这是开天辟地的大事变，深刻改变了()。",
+    "options": [
+      {
+        "key": "A",
+        "text": "近代以后中华民族发展的方向和进程"
+      },
+      {
+        "key": "B",
+        "text": "时代发展的主题和任务"
+      },
+      {
+        "key": "C",
+        "text": "中国人民和中华民族的前途和命运"
+      },
+      {
+        "key": "D",
+        "text": "世界发展的趋势和格局"
+      }
+    ],
+    "answer": "ACD"
+  },
+  {
+    "id": "multiple-17",
+    "type": "multiple",
+    "number": 17,
+    "sourceNumber": 17,
+    "question": "中国共产党领导人民发展社会主义民主政治，坚持()有机统一，走中国特色社会主义政治发展道路。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的领导"
+      },
+      {
+        "key": "B",
+        "text": "人民当家作主"
+      },
+      {
+        "key": "C",
+        "text": "以德治国"
+      },
+      {
+        "key": "D",
+        "text": "依法治国"
+      }
+    ],
+    "answer": "ABD"
+  },
+  {
+    "id": "multiple-18",
+    "type": "multiple",
+    "number": 18,
+    "sourceNumber": 18,
+    "question": "泄露、扩散或者打探、窃取党组织关于()等尚未公开事项或者其他应当保密的内容的，给予警告或者严重警告处分；情节较重的，给予撤销党内职务或者留党察看处分；情节严重的，给予开除党籍处分。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "干部选拔任用"
+      },
+      {
+        "key": "B",
+        "text": "纪律审查"
+      },
+      {
+        "key": "C",
+        "text": "巡视巡察"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-19",
+    "type": "multiple",
+    "number": 19,
+    "sourceNumber": 19,
+    "question": "习近平总书记指出，中国特色社会主义进入新时代,在（）发展史上具有重大意义。全党要坚定信心、奋发有为,让中国特色社会主义展现出更加强大的生命力。",
+    "options": [
+      {
+        "key": "A",
+        "text": "中华人民共和国"
+      },
+      {
+        "key": "B",
+        "text": "中华民族"
+      },
+      {
+        "key": "C",
+        "text": "世界社会主义"
+      },
+      {
+        "key": "D",
+        "text": "人类社会"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-20",
+    "type": "multiple",
+    "number": 20,
+    "sourceNumber": 20,
+    "question": "习近平总书记指出，全党要更加自觉地增强（），既不走封闭僵化的老路，也不走改旗易帜的邪路，保持政治定力，坚持实干兴邦，始终坚持和发展中国特色社会主义。",
+    "options": [
+      {
+        "key": "A",
+        "text": "道路自信"
+      },
+      {
+        "key": "B",
+        "text": "理论自信"
+      },
+      {
+        "key": "C",
+        "text": "制度自信"
+      },
+      {
+        "key": "D",
+        "text": "文化自信"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-21",
+    "type": "multiple",
+    "number": 21,
+    "sourceNumber": 21,
+    "question": "习近平总书记指出，新时代中国特色社会主义思想是对马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观的继承和发展,（）,必须长期坚持并不断发展。",
+    "options": [
+      {
+        "key": "A",
+        "text": "是马克思主义中国化最新成果"
+      },
+      {
+        "key": "B",
+        "text": "是党和人民实践经验和集体智慧的结晶"
+      },
+      {
+        "key": "C",
+        "text": "是中国特色社会主义理论体系的重要组成部分"
+      },
+      {
+        "key": "D",
+        "text": "是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-22",
+    "type": "multiple",
+    "number": 22,
+    "sourceNumber": 22,
+    "question": "习近平新时代中国特色社会主义思想“十四个坚持”基本方略,包含：坚持党对一切工作的领导；（）；坚持全面依法治国；坚持社会主义核心价值体系；坚持在发展中保障和改善民生；坚持人与自然和谐共生；坚持总体国家安全观；坚持党对人民军队的绝对领导；坚持“一国两制”和推进祖国统一；坚持推动构建人类命运共同体；坚持全面从严治党。",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持以人民为中心"
+      },
+      {
+        "key": "B",
+        "text": "坚持全面深化改革"
+      },
+      {
+        "key": "C",
+        "text": "坚持新发展理念"
+      },
+      {
+        "key": "D",
+        "text": "坚持人民当家作主"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-23",
+    "type": "multiple",
+    "number": 23,
+    "sourceNumber": 23,
+    "question": "习近平新时代中国特色社会主义思想强调，坚持（）有机统一是社会主义政治发展的必然要求。",
+    "options": [
+      {
+        "key": "A",
+        "text": "党的领导"
+      },
+      {
+        "key": "B",
+        "text": "人民当家作主"
+      },
+      {
+        "key": "C",
+        "text": "依法治国"
+      },
+      {
+        "key": "D",
+        "text": "改革开放"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-24",
+    "type": "multiple",
+    "number": 24,
+    "sourceNumber": 24,
+    "question": "习近平新时代中国特色社会主义思想强调，坚持党对人民军队的绝对领导。建设一支（）的人民军队，是实现“两个一百年”奋斗目标、实现中华民族伟大复兴的战略支撑。",
+    "options": [
+      {
+        "key": "A",
+        "text": "听党指挥"
+      },
+      {
+        "key": "B",
+        "text": "能打胜仗"
+      },
+      {
+        "key": "C",
+        "text": "作风优良"
+      },
+      {
+        "key": "D",
+        "text": "实事求是"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-25",
+    "type": "multiple",
+    "number": 25,
+    "sourceNumber": 25,
+    "question": "习近平新时代中国特色社会主义思想强调，必须坚持国家利益至上,以人民安全为宗旨,以政治安全为根本,统筹（），完善国,家安全制度体系，加强国家安全能力建设，坚决维护国家主权、安全、发展利益。",
+    "options": [
+      {
+        "key": "A",
+        "text": "外部安全和内部安全"
+      },
+      {
+        "key": "B",
+        "text": "国土安全和国民安全"
+      },
+      {
+        "key": "C",
+        "text": "传统安全和非传统安全"
+      },
+      {
+        "key": "D",
+        "text": "自身安全和共同安全"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-26",
+    "type": "multiple",
+    "number": 26,
+    "sourceNumber": 26,
+    "question": "习近平总书记指出，全面依法治国是国家治理的一场深刻革命，必须坚持厉行法治，推进（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "科学立法"
+      },
+      {
+        "key": "B",
+        "text": "严格执法"
+      },
+      {
+        "key": "C",
+        "text": "公正司法"
+      },
+      {
+        "key": "D",
+        "text": "全民守法"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-27",
+    "type": "multiple",
+    "number": 27,
+    "sourceNumber": 27,
+    "question": "习近平总书记强调，坚定不移走中国特色社会主义法治道路，必须坚持中国共产党的领导，必须（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持人民主体地位"
+      },
+      {
+        "key": "B",
+        "text": "坚持法律面前人人平等"
+      },
+      {
+        "key": "C",
+        "text": "坚持依法治国和以德治国相结合"
+      },
+      {
+        "key": "D",
+        "text": "坚持从中国实际出发"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-28",
+    "type": "multiple",
+    "number": 28,
+    "sourceNumber": 28,
+    "question": "习近平总书记强调，宗教问题始终是我们党治国理政必须处理好的重大问题，宗教工作在党和国家工作全局中具有特殊重要性,（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "关系中国特色社会主义事业发展"
+      },
+      {
+        "key": "B",
+        "text": "关系党同人民群众的血肉联系"
+      },
+      {
+        "key": "C",
+        "text": "关系社会和谐、民族团结"
+      },
+      {
+        "key": "D",
+        "text": "关系国家安全和祖国统一"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-29",
+    "type": "multiple",
+    "number": 29,
+    "sourceNumber": 29,
+    "question": "全面依法治国是坚持和发展中国特色社会主义的本质要求和重要保障，事关我们党（）,事关人民（）,事关党和国家（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "执政兴国"
+      },
+      {
+        "key": "B",
+        "text": "幸福安康"
+      },
+      {
+        "key": "C",
+        "text": "事业发展"
+      },
+      {
+        "key": "D",
+        "text": "长治久安"
+      }
+    ],
+    "answer": "ABD"
+  },
+  {
+    "id": "multiple-30",
+    "type": "multiple",
+    "number": 30,
+    "sourceNumber": 30,
+    "question": "人民当家作主是社会主义民主政治的本质和核心。习近平总书记指出：“发展社会主义民主政治就是要体现（）、保障（）、激发（），用制度体系保证人民当家作主。”",
+    "options": [
+      {
+        "key": "A",
+        "text": "人民意志"
+      },
+      {
+        "key": "B",
+        "text": "人民权益"
+      },
+      {
+        "key": "C",
+        "text": "人民创造活力"
+      },
+      {
+        "key": "D",
+        "text": "人民幸福感"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-31",
+    "type": "multiple",
+    "number": 31,
+    "sourceNumber": 31,
+    "question": "习近平总书记指出，推动社会主义文化繁荣兴盛，要坚持（），坚持百花齐放、百家争鸣，坚持创造性转化、创新性发展，不断铸就中华文化新辉煌。",
+    "options": [
+      {
+        "key": "A",
+        "text": "为人民服务"
+      },
+      {
+        "key": "B",
+        "text": "为公民服务"
+      },
+      {
+        "key": "C",
+        "text": "为社会主义服务"
+      },
+      {
+        "key": "D",
+        "text": "为共产主义服务"
+      }
+    ],
+    "answer": "AC"
+  },
+  {
+    "id": "multiple-32",
+    "type": "multiple",
+    "number": 32,
+    "sourceNumber": 32,
+    "question": "习近平总书记指出，加强思想道德建设，要广泛开展理想信念教育，深化中国特色社会主义和中国梦宣传教育,弘扬民族精神和时代精神，加强爱国主义、集体主义、社会主义教育，引导人们树立正确的（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "历史观"
+      },
+      {
+        "key": "B",
+        "text": "民族观"
+      },
+      {
+        "key": "C",
+        "text": "国家观"
+      },
+      {
+        "key": "D",
+        "text": "文化观"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-33",
+    "type": "multiple",
+    "number": 33,
+    "sourceNumber": 33,
+    "question": "习近平总书记强调，要切实把社会主义核心价值观贯穿于社会生活方方面面。要通过教育引导、（）等，使社会主义核心价值观内化为人们的精神追求，外化为人们的自觉行动。",
+    "options": [
+      {
+        "key": "A",
+        "text": "舆论宣传"
+      },
+      {
+        "key": "B",
+        "text": "文化熏陶"
+      },
+      {
+        "key": "C",
+        "text": "实践养成"
+      },
+      {
+        "key": "D",
+        "text": "制度保障"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-34",
+    "type": "multiple",
+    "number": 34,
+    "sourceNumber": 34,
+    "question": "习近平总书记强调，各级领导干部特别是高级干部要继承和弘扬中华优秀传统文化，要（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "保持高尚道德情操和健康生活情趣"
+      },
+      {
+        "key": "B",
+        "text": "严格要求亲属子女，过好亲情关"
+      },
+      {
+        "key": "C",
+        "text": "为全社会做表率"
+      },
+      {
+        "key": "D",
+        "text": "把修身、齐家落到实处"
+      }
+    ],
+    "answer": "ABC"
+  },
+  {
+    "id": "multiple-35",
+    "type": "multiple",
+    "number": 35,
+    "sourceNumber": 35,
+    "question": "习近平主席指出，（），有这样伟大的人民，有这样伟大的民族，有这样的伟大民族精神，是我们的骄傲，是我们坚定中国特色社会主义道路自信、理论自信、制度自信、文化自信的底气，也是我们风雨无阻、高歌行进的根本力量。",
+    "options": [
+      {
+        "key": "A",
+        "text": "中国人民是具有伟大创造精神的人民"
+      },
+      {
+        "key": "B",
+        "text": "中国人民是具有伟大奋斗精神的人民"
+      },
+      {
+        "key": "C",
+        "text": "中国人民是具有伟大团结精神的人民"
+      },
+      {
+        "key": "D",
+        "text": "中国人民是具有伟大梦想精神的人民"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-36",
+    "type": "multiple",
+    "number": 36,
+    "sourceNumber": 36,
+    "question": "习近平总书记强调，我们的人民热爱生活，期盼有（）,期盼孩子们能成长得更好、工作得更好、生活得更好。人民对美好生活的向往，就是我们的奋斗目标。",
+    "options": [
+      {
+        "key": "A",
+        "text": "更好的教育、更稳定的工作"
+      },
+      {
+        "key": "B",
+        "text": "更满意的收入、更可靠的社会保障"
+      },
+      {
+        "key": "C",
+        "text": "更高水平的医疗卫生服务"
+      },
+      {
+        "key": "D",
+        "text": "更舒适的居住条件、更优美的环境"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-37",
+    "type": "multiple",
+    "number": 37,
+    "sourceNumber": 37,
+    "question": "习近平总书记强调，扩大中等收入群体，关系全面建成小康社会目标的实现，（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "是保证社会阶层结构合理的必然要求"
+      },
+      {
+        "key": "B",
+        "text": "是转方式调结构的必然要求"
+      },
+      {
+        "key": "C",
+        "text": "是维护社会和谐稳定的必然要求"
+      },
+      {
+        "key": "D",
+        "text": "是维护国家长治久安的必然要求"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-38",
+    "type": "multiple",
+    "number": 38,
+    "sourceNumber": 38,
+    "question": "习近平总书记强调，必须坚持总体国家安全观,（）,以促进国际安全为依托，走出一条中国特色国家安全道路。",
+    "options": [
+      {
+        "key": "A",
+        "text": "以人民安全为宗旨"
+      },
+      {
+        "key": "B",
+        "text": "以政治安全为根本"
+      },
+      {
+        "key": "C",
+        "text": "以经济安全为基础"
+      },
+      {
+        "key": "D",
+        "text": "以军事、文化、社会安全为保障"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-39",
+    "type": "multiple",
+    "number": 39,
+    "sourceNumber": 39,
+    "question": "习近平总书记强调，准确把握国家安全形势变化新特点新趋势，坚持（），既重视自身安全，又重视共同安全，切实做好国家安全各项工作。",
+    "options": [
+      {
+        "key": "A",
+        "text": "既重视外部安全，又重视内部安全"
+      },
+      {
+        "key": "B",
+        "text": "既重视国土安全，又重视国民安全"
+      },
+      {
+        "key": "C",
+        "text": "既重视传统安全，又重视非传统安全"
+      },
+      {
+        "key": "D",
+        "text": "既重视发展问题，又重视安全问题"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-40",
+    "type": "multiple",
+    "number": 40,
+    "sourceNumber": 40,
+    "question": "从现在起，中国共产党的中心任务就是（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "团结带领全国各族人民全面建成社会主义现代化强国，实现第二个百年奋斗目标"
+      },
+      {
+        "key": "B",
+        "text": "以中国式现代化全面推进中华民族伟大复兴"
+      },
+      {
+        "key": "C",
+        "text": "推进城乡融合和区域协调发展"
+      },
+      {
+        "key": "D",
+        "text": "推动共建一带一路高质量发展"
+      }
+    ],
+    "answer": "AB"
+  },
+  {
+    "id": "multiple-41",
+    "type": "multiple",
+    "number": 41,
+    "sourceNumber": 41,
+    "question": "中国式现代化的本质要求是（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持中国共产党领导"
+      },
+      {
+        "key": "B",
+        "text": "坚持中国特色社会主义，实现高质量发展"
+      },
+      {
+        "key": "C",
+        "text": "发展全过程人民民主，丰富人民精神世界"
+      },
+      {
+        "key": "D",
+        "text": "实现全体人民共同富裕"
+      },
+      {
+        "key": "E",
+        "text": "促进人与自然和谐共生"
+      },
+      {
+        "key": "F",
+        "text": "推动构建人类命运共同体，创造人类文明新形态。"
+      }
+    ],
+    "answer": "ABCDEF"
+  },
+  {
+    "id": "multiple-42",
+    "type": "multiple",
+    "number": 42,
+    "sourceNumber": 42,
+    "question": "习近平总书记指出，全党要更加自觉地增强（），既不走封闭僵化的老路，也不走改旗易帜的邪路，保持政治定力，坚持实干兴邦，始终坚持和发展中国特色社会主义。",
+    "options": [
+      {
+        "key": "A",
+        "text": "道路自信"
+      },
+      {
+        "key": "B",
+        "text": "理论自信"
+      },
+      {
+        "key": "C",
+        "text": "制度自信"
+      },
+      {
+        "key": "D",
+        "text": "文化自信"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-43",
+    "type": "multiple",
+    "number": 43,
+    "sourceNumber": 43,
+    "question": "党的建设必须实现的基本要求是（）。",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持党的基本路线"
+      },
+      {
+        "key": "B",
+        "text": "坚持解放思想，实事求是，与时俱进，求真务实"
+      },
+      {
+        "key": "C",
+        "text": "坚持全心全意为人民服务"
+      },
+      {
+        "key": "D",
+        "text": "坚持民主集中制"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-44",
+    "type": "multiple",
+    "number": 44,
+    "sourceNumber": 44,
+    "question": "党的十八大以来，中央出台八项规定，严厉整治(),巡视利剑作用彰显。",
+    "options": [
+      {
+        "key": "A",
+        "text": "奢靡之风"
+      },
+      {
+        "key": "B",
+        "text": "官僚主义"
+      },
+      {
+        "key": "C",
+        "text": "享乐主义"
+      },
+      {
+        "key": "D",
+        "text": "形式主义"
+      }
+    ],
+    "answer": "ABCD"
+  },
+  {
+    "id": "multiple-45",
+    "type": "multiple",
+    "number": 45,
+    "sourceNumber": 45,
+    "question": "持之以恒推进全面从严治党遵循的原则（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "坚持服务使命任务"
+      },
+      {
+        "key": "B",
+        "text": "坚持以党的政治建设为统领"
+      },
+      {
+        "key": "C",
+        "text": "坚持全面从严"
+      },
+      {
+        "key": "D",
+        "text": "坚持问题导向"
+      },
+      {
+        "key": "E",
+        "text": "坚持守正创新"
+      },
+      {
+        "key": "F",
+        "text": "坚持以上率下"
+      },
+      {
+        "key": "G",
+        "text": "坚持依规治党"
+      }
+    ],
+    "answer": "ABCDEFG"
+  },
+  {
+    "id": "judge-1",
+    "type": "judge",
+    "number": 1,
+    "sourceNumber": 1,
+    "question": "党支部每半年对入党积极分子进行一次考察。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-2",
+    "type": "judge",
+    "number": 2,
+    "sourceNumber": 2,
+    "question": "凡是未经政治审查或政治审查不合格的，不能发展入党。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-3",
+    "type": "judge",
+    "number": 3,
+    "sourceNumber": 3,
+    "question": "发展对象未来三个月将离开工作、学习单位的，一般不办理接收预备党员的手续。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-4",
+    "type": "judge",
+    "number": 4,
+    "sourceNumber": 4,
+    "question": "《中国人民政治协商会议共同纲领》在新中国成立之初起着临时宪法的作用。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-5",
+    "type": "judge",
+    "number": 5,
+    "sourceNumber": 5,
+    "question": "中国共产党党徽党旗制作、使用、管理必须坚持统一标准、统一规范。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-6",
+    "type": "judge",
+    "number": 6,
+    "sourceNumber": 6,
+    "question": "“一带一路”建设遵循共商、共建、共享原则，将为欧亚大陆的振兴开辟新的广阔前景。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-7",
+    "type": "judge",
+    "number": 7,
+    "sourceNumber": 7,
+    "question": "入党申请人应当向工作、学习所在单位党组织提出入党申请，没有工作、学习单位或工作、学习单位未建立党组织的，应当向居住地党组织提出入党申请。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-8",
+    "type": "judge",
+    "number": 8,
+    "sourceNumber": 8,
+    "question": "政治审查必须严肃认真、实事求是，注重本人的一贯表现。审查情况应当形成结论性材料。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-9",
+    "type": "judge",
+    "number": 9,
+    "sourceNumber": null,
+    "question": "中国共产党的根本宗旨是全心全意为人民服务。（ ）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A",
+    "supplement": true,
+    "note": "补充题：原文判断题缺第9题，本题依据原题库填空题第11题补充。"
+  },
+  {
+    "id": "judge-10",
+    "type": "judge",
+    "number": 10,
+    "sourceNumber": 10,
+    "question": "维护党徽党旗的尊严，就是维护党的尊严，是各级党组织和每名党员必须履行的政治责任。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-11",
+    "type": "judge",
+    "number": 11,
+    "sourceNumber": 11,
+    "question": "《党章》规定,党选拔干部坚持五湖四海、任人唯贤，反对任人唯亲。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-12",
+    "type": "judge",
+    "number": 12,
+    "sourceNumber": 12,
+    "question": "毛泽东思想是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-13",
+    "type": "judge",
+    "number": 13,
+    "sourceNumber": 13,
+    "question": "中国共产党领导全国各族人民取得新民主主义革命胜利后，建立了民主集中制的中华人民共和国。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-14",
+    "type": "judge",
+    "number": 14,
+    "sourceNumber": 14,
+    "question": "邓小平理论是马克思列宁主义的基本原理同当代中国实践和时代特征相结合的产物。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-15",
+    "type": "judge",
+    "number": 15,
+    "sourceNumber": 15,
+    "question": "“三个代表”重要思想反映了当代世界和中国的发展变化对党和国家工作的新要求。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-16",
+    "type": "judge",
+    "number": 16,
+    "sourceNumber": 16,
+    "question": "科学发展观深刻认识和回答了新形势下实现什么样的发展、怎样发展等重大问题。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-17",
+    "type": "judge",
+    "number": 17,
+    "sourceNumber": 17,
+    "question": "在现阶段，我国社会的主要矛盾是人民日益增长的美好生活需要和不协调不充分的发展之间的矛盾。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-18",
+    "type": "judge",
+    "number": 18,
+    "sourceNumber": 18,
+    "question": "习近平新时代中国特色社会主义思想系统回答了新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义这个重大时代课题。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-19",
+    "type": "judge",
+    "number": 19,
+    "sourceNumber": 19,
+    "question": "中国共产党在社会主义初级阶段的基本路线是：领导和团结全国各族人民，以经济建设为中心，坚持四项基本原则，坚持改革开放，自力更生，艰苦创业，为把我国建设成为富强民主文明和谐美丽的社会主义现代化强国而奋斗。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-20",
+    "type": "judge",
+    "number": 20,
+    "sourceNumber": 20,
+    "question": "社会主义精神文明建设要实行依法治国和以德治国相结合（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-21",
+    "type": "judge",
+    "number": 21,
+    "sourceNumber": 21,
+    "question": "改革是我们党执政兴国的第一要务。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-22",
+    "type": "judge",
+    "number": 22,
+    "sourceNumber": 22,
+    "question": "马克思列宁主义揭示了人类社会历史发展的规律，它的基本原理是正确的，具有强大的生命力。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-23",
+    "type": "judge",
+    "number": 23,
+    "sourceNumber": 23,
+    "question": "我们党的最大政治优势是密切联系群众，党执政后的最大危险是脱离群众。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-24",
+    "type": "judge",
+    "number": 24,
+    "sourceNumber": 24,
+    "question": "党的领导主要是政治、思想和群众工作的领导。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-25",
+    "type": "judge",
+    "number": 25,
+    "sourceNumber": 25,
+    "question": "年满十八岁的中国工人、农民、军人、知识分子和其他革命分子，满足条件的，可以申请加入中国共产党。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-26",
+    "type": "judge",
+    "number": 26,
+    "sourceNumber": 26,
+    "question": "党员必须认真学习马克思列宁主义、毛泽东思想、邓小平理论,学习党的路线、方针、政策及决议，学习党的基本知识，努力提高为人民服务的本领。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-27",
+    "type": "judge",
+    "number": 27,
+    "sourceNumber": 27,
+    "question": "党员对党的决议和政策如有不同意见，在坚决执行的前提下，可以声明保留，并且可以把自己的意见向党的上级组织直至中央提出。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-28",
+    "type": "judge",
+    "number": 28,
+    "sourceNumber": 28,
+    "question": "申请入党的人，只要上级党组织批准，并且经过预备期的考察,就能成为正式党员。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-29",
+    "type": "judge",
+    "number": 29,
+    "sourceNumber": 29,
+    "question": "上级党组织在批准申请人入党以前，要派人同他谈话，作进一步的了解，并帮助他提高对党的认识。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-30",
+    "type": "judge",
+    "number": 30,
+    "sourceNumber": 30,
+    "question": "申请入党的人必须有两名党员作介绍人。这里的党员是指党员领导干部。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-31",
+    "type": "judge",
+    "number": 31,
+    "sourceNumber": 31,
+    "question": "预备党员的权利，除了没有表决权、选举权和被选举权以外，也同正式党员一样。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-32",
+    "type": "judge",
+    "number": 32,
+    "sourceNumber": 32,
+    "question": "党员的党龄，从支部大会通过他为预备党员之日算起。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-33",
+    "type": "judge",
+    "number": 33,
+    "sourceNumber": 33,
+    "question": "预备党员取消预备党员资格，应当经支部大会讨论通过和上级党组织批准。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-34",
+    "type": "judge",
+    "number": 34,
+    "sourceNumber": 34,
+    "question": "党员领导干部必须参加党委、党组的民主生活会。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-35",
+    "type": "judge",
+    "number": 35,
+    "sourceNumber": 35,
+    "question": "党员根据实际情况，可以不编入党的一个支部、小组或者其他特定组织参加党组织活动。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "judge-36",
+    "type": "judge",
+    "number": 36,
+    "sourceNumber": 36,
+    "question": "党组织讨论决定问题，必须执行少数服从多数的原则。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-37",
+    "type": "judge",
+    "number": 37,
+    "sourceNumber": 37,
+    "question": "《关于新形势下党内政治生活的若干准则》指出，人民立场是党的根本政治立场，人民群众是党的力量源泉。我们党来自人民，失去人民拥护和支持，党就会失去根基。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-38",
+    "type": "judge",
+    "number": 38,
+    "sourceNumber": 38,
+    "question": "作风问题具有反复性和顽固性，因此贯彻中央八项规定精神必须持续发力、久久为功，一个节点一个节点坚守，不可能一蹴而就。",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-39",
+    "type": "judge",
+    "number": 39,
+    "sourceNumber": 39,
+    "question": "《中国共产党党员权利保障条例》规定，党员享有的党章规定的各项权利必须受到尊重和保护，党的任何一级组织、任何党员都无权剥夺。（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "judge-40",
+    "type": "judge",
+    "number": 40,
+    "sourceNumber": 40,
+    "question": "正风肃纪是全面从严治党的有力举措（）",
+    "options": [
+      {
+        "key": "A",
+        "text": "对"
+      },
+      {
+        "key": "B",
+        "text": "错"
+      }
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "blank-1",
+    "type": "blank",
+    "number": 1,
+    "sourceNumber": 1,
+    "question": "申请加入中国共产党的条件之一，必须是年满十八岁的中国工人、农民、军人、知识分子和其他社会阶层的（）分子。",
+    "options": [],
+    "answer": "先进"
+  },
+  {
+    "id": "blank-2",
+    "type": "blank",
+    "number": 2,
+    "sourceNumber": 2,
+    "question": "习近平总书记指出，作风问题核心是党同人民群众的关系问题。要坚决纠正形式主义、（）、享乐主义和奢靡之风，坚决破除特权思想、特权行为，坚决整治群众身边的腐败和不正之风，让人民群众不断看到实实在在的成效和变化。",
+    "options": [],
+    "answer": "官僚主义"
+  },
+  {
+    "id": "blank-3",
+    "type": "blank",
+    "number": 3,
+    "sourceNumber": 3,
+    "question": "预备党员必须面向（）进行入党宣誓。",
+    "options": [],
+    "answer": "党旗"
+  },
+  {
+    "id": "blank-4",
+    "type": "blank",
+    "number": 4,
+    "sourceNumber": 4,
+    "question": "党徽党旗表明中国共产党是中国（）阶级的先锋队，同时是中国人民和中华民族的先锋队。",
+    "options": [],
+    "answer": "工人"
+  },
+  {
+    "id": "blank-5",
+    "type": "blank",
+    "number": 5,
+    "sourceNumber": 5,
+    "question": "党章是最根本的党内法规，是管党治党的总规矩，（）是党的各级组织和全体党员必须遵守的行为规则。",
+    "options": [],
+    "answer": "党的纪律"
+  },
+  {
+    "id": "blank-6",
+    "type": "blank",
+    "number": 6,
+    "sourceNumber": 6,
+    "question": "在党内组织秘密集团或者组织其他分裂党的活动的，给予（）处分。",
+    "options": [],
+    "answer": "开除党籍"
+  },
+  {
+    "id": "blank-7",
+    "type": "blank",
+    "number": 7,
+    "sourceNumber": 7,
+    "question": "党的七大确立（）为党的指导思想并写入《党章》。",
+    "options": [],
+    "answer": "毛泽东思想"
+  },
+  {
+    "id": "blank-8",
+    "type": "blank",
+    "number": 8,
+    "sourceNumber": 8,
+    "question": "中国共产党党徽党旗制作、使用、管理必须坚持统一（）、统一规范。",
+    "options": [],
+    "answer": "标准"
+  },
+  {
+    "id": "blank-9",
+    "type": "blank",
+    "number": 9,
+    "sourceNumber": 9,
+    "question": "（）是发展中国特色社会主义的强大动力。",
+    "options": [],
+    "answer": "改革开放"
+  },
+  {
+    "id": "blank-10",
+    "type": "blank",
+    "number": 10,
+    "sourceNumber": 10,
+    "question": "党必须按照（）、协调各方的原则，在同级各种组织中发挥领导核心作用。",
+    "options": [],
+    "answer": "总揽全局"
+  },
+  {
+    "id": "blank-11",
+    "type": "blank",
+    "number": 11,
+    "sourceNumber": 11,
+    "question": "党的根本宗旨是（）。",
+    "options": [],
+    "answer": "全心全意为人民服务"
+  },
+  {
+    "id": "blank-12",
+    "type": "blank",
+    "number": 12,
+    "sourceNumber": 12,
+    "question": "无产阶级政党的第一个党纲是（）。",
+    "options": [],
+    "answer": "共产党宣言"
+  },
+  {
+    "id": "blank-13",
+    "type": "blank",
+    "number": 13,
+    "sourceNumber": 13,
+    "question": "根据《中国共产党章程》，中国共产党党徽为（）和锤头的组成图案。",
+    "options": [],
+    "answer": "镰刀"
+  },
+  {
+    "id": "blank-14",
+    "type": "blank",
+    "number": 14,
+    "sourceNumber": 14,
+    "question": "党组织对入党积极分子进行培养教育可以采取听（）、参加党内有关活动、分配一定的（）、集中（）等的方式进行。",
+    "options": [],
+    "answer": "党课   社会工作   培训"
+  },
+  {
+    "id": "blank-15",
+    "type": "blank",
+    "number": 15,
+    "sourceNumber": 15,
+    "question": "《党章》明确规定，党必须在（）的范围内活动。",
+    "options": [],
+    "answer": "宪法和法律"
+  },
+  {
+    "id": "blank-16",
+    "type": "blank",
+    "number": 16,
+    "sourceNumber": 16,
+    "question": "中国共产党的党徽党旗是中国共产党的象征和标志。维护党徽党旗的尊严，就是维护党的尊严，是各级党组织和每名党员必须履行的（）。",
+    "options": [],
+    "answer": "政治责任"
+  },
+  {
+    "id": "blank-17",
+    "type": "blank",
+    "number": 17,
+    "sourceNumber": 17,
+    "question": "特殊情形需要同时悬挂中国共产党党旗和其他旗帜的，应当把党旗置于（）位置",
+    "options": [],
+    "answer": "首要"
+  },
+  {
+    "id": "blank-18",
+    "type": "blank",
+    "number": 18,
+    "sourceNumber": 18,
+    "question": "确定入党积极分子为发展对象，一般应经过党组织（）以上的培养教育和考察，完成了规定内容的培训教育，且符合《党章》规定的（）条件，才能确定为发展对象。",
+    "options": [],
+    "answer": "一年   党员"
+  },
+  {
+    "id": "blank-19",
+    "type": "blank",
+    "number": 19,
+    "sourceNumber": 19,
+    "question": "根据《中共大连工业大学委员会发展党员工作实施细则》，入党积极分子应至少每（）向党支部和培养联系人进行1次书面思想汇报。",
+    "options": [],
+    "answer": "季度"
+  },
+  {
+    "id": "blank-20",
+    "type": "blank",
+    "number": 20,
+    "sourceNumber": 20,
+    "question": "全面从严治党的根本性任务是（）",
+    "options": [],
+    "answer": "增强党性"
+  }
+];
+
+</script>
+<script>(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var notice = $('#offlineNotice');
+  function reportError() { notice.style.display = 'block'; notice.textContent = '自动答题未能启动。请先下载本文件，再右键选择 Chrome、Edge 或 Safari 打开；不要在聊天或文件预览里答题。下方仍可展开全部165道题进行背诵。'; $('#staticFallback').style.display = 'block'; }
+  window.addEventListener('error', reportError);
+  try {
+    var bank = window.QUESTION_BANK, byId = {}, names = {all:'全部题目',single:'单选题',multiple:'多选题',judge:'判断题',blank:'填空题'};
+    var types = ['all','single','multiple','judge','blank'], KEY = 'fiona-recall-offline-v2';
+    var state = {records:{},category:'all',mode:'all',shuffle:false,sound:false,session:null};
+    var draft = [], submitted = false, storageOK = true, audioContext;
+    bank.forEach(function(q) { byId[q.id] = q; });
+    function esc(s) { return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+    function normalize(s) { s=String(s); if(s.normalize) s=s.normalize('NFKC'); return s.replace(/[\s.,，。;；:：!?！？、‘’“”'"《》〈〉()（）\[\]【】{}<>…—_\-\/\\]/g,'').toLowerCase(); }
+    function parts(q) { return q.answer.split(/\s+/).filter(function(v){return !!v;}); }
+    function each(selector, fn) { Array.prototype.forEach.call(document.querySelectorAll(selector),fn); }
+    function toggle(el,c,on) { if(on) el.classList.add(c); else el.classList.remove(c); }
+    function parent(el,attr) { while(el && el!==document) { if(el.getAttribute && el.getAttribute(attr)!==null) return el; el=el.parentNode; } return null; }
+    function writeStorage() { try { localStorage.setItem(KEY,JSON.stringify(state)); } catch(e) { storageOK=false; $('#storageNote').textContent='浏览器不允许保存记录，本次仍可正常练习'; } }
+    try {
+      var saved=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem('fiona-recall-v1')||'null');
+      if(saved && saved.records && typeof saved.records==='object') {
+        state.records=saved.records; state.category=names[saved.category]?saved.category:'all';
+        state.mode=['all','wrong','new'].indexOf(saved.mode)!==-1?saved.mode:'all';
+        state.shuffle=!!saved.shuffle; state.sound=!!saved.sound;
+        if(saved.session && Array.isArray(saved.session.ids) && saved.session.ids.length && saved.session.ids.every(function(id){return !!byId[id];}) && saved.session.results) state.session=saved.session;
+      }
+    } catch(e) { storageOK=false; }
+    Object.keys(state.records).forEach(function(id){var r=state.records[id];if(!byId[id]||!r||['correct','wrong','peek'].indexOf(r.status)===-1) delete state.records[id];});
+    function eligible() { return bank.filter(function(q){var r=state.records[q.id];return (state.category==='all'||q.type===state.category)&&(state.mode==='all'||(state.mode==='wrong'?!!r&&r.status!=='correct':!r));}); }
+    function newSession() {
+      var ids=eligible().map(function(q){return q.id;});
+      if(state.shuffle) for(var i=ids.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),tmp=ids[i];ids[i]=ids[j];ids[j]=tmp;}
+      state.session={ids:ids,index:0,results:{},finished:false};writeStorage();
+    }
+    if(!state.session){ if(!eligible().length) state.mode='all';newSession(); }
+    function stats() {
+      var records=Object.keys(state.records), correct=records.filter(function(id){return state.records[id].status==='correct';}).length;
+      $('#practiced').textContent=records.length;$('#mastered').textContent=correct;$('#wrongTotal').textContent=records.length-correct;$('#wrongBadge').textContent=records.length-correct;
+      $('#coverage').textContent=Math.round(records.length/bank.length*100)+'%';$('#coverageBar').style.width=records.length/bank.length*100+'%';
+      $('#categories').innerHTML=types.map(function(type){return '<button data-category="'+type+'" class="'+(state.category===type?'active':'')+'" aria-pressed="'+(state.category===type)+'"><span>'+names[type]+'</span><b>'+(type==='all'?bank.length:bank.filter(function(q){return q.type===type;}).length)+'</b></button>';}).join('');
+      each('[data-mode]',function(b){var active=b.getAttribute('data-mode')===state.mode;toggle(b,'active',active);b.setAttribute('aria-pressed',String(active));});
+      $('#shuffle').checked=state.shuffle;$('#sound').textContent='提示音：'+(state.sound?'开':'关');$('#sound').setAttribute('aria-pressed',String(state.sound));
+      if(!storageOK)$('#storageNote').textContent='浏览器不允许保存记录，本次仍可正常练习';
+    }
+    function answerText(q) { if(q.type==='blank')return parts(q).join(' / ');return q.options.filter(function(o){return q.answer.indexOf(o.key)!==-1;}).map(function(o){return (q.type==='judge'?'':o.key+'．')+o.text;}).join('；'); }
+    function feedback(q,r) {
+      var title=r.status==='correct'?'✓ 答对了，记得很牢！':r.status==='peek'?'先记住，再试一次。':'再记一次，下一遍会更熟。', extra='';
+      if(q.type==='multiple'&&r.status==='wrong'){
+        var chosen=r.value||[], missing=q.answer.split('').filter(function(k){return chosen.indexOf(k)===-1;}), excess=chosen.filter(function(k){return q.answer.indexOf(k)===-1;});
+        extra='<p>'+(missing.length?'漏选：'+missing.join('、')+'。 ':'')+(excess.length?'多选：'+excess.join('、')+'。':'')+'</p>';
+      }
+      return '<div class="feedback '+(r.status==='wrong'?'bad':r.status==='peek'?'peek':'')+'" role="status" aria-live="polite"><h3>'+title+'</h3><p class="answer">题库答案：'+esc(answerText(q))+'</p>'+extra+'<p>'+(r.status==='correct'?'这道题已经记下，继续保持自己的节奏。':'已加入错题，重新答对后会自动移出。')+'</p></div>';
+    }
+    function render() {
+      stats();var s=state.session;
+      if(!s.ids.length){$('#quiz').innerHTML='<div class="empty"><h2>'+(state.mode==='wrong'?'暂时没有待复习错题':'这个范围已经练过了')+'</h2><p>可以切回全部练习，继续巩固记忆。</p><button class="primary" data-action="all">开始全部练习</button></div>';return;}
+      if(s.finished){showSummary();return;}
+      s.index=Math.max(0,Math.min(Number(s.index)||0,s.ids.length-1));
+      var q=byId[s.ids[s.index]], r=s.results[q.id], answered=Object.keys(s.results).length;
+      submitted=!!r;draft=r&&Array.isArray(r.value)?r.value.slice():[];
+      var body;
+      if(q.type==='blank'){
+        body='<div class="fill-fields">'+parts(q).map(function(p,i){return '<label>第'+(i+1)+'空<input type="text" autocomplete="off" spellcheck="false" data-blank="'+i+'" aria-label="第'+(i+1)+'空" placeholder="输入你记得的答案" '+(r?'disabled':'')+' value="'+esc(r&&r.value&&r.value[i]||'')+'"></label>';}).join('')+'</div>';
+      }else{
+        body='<div class="options" role="group" aria-label="答案选项">'+q.options.map(function(o){var chosen=draft.indexOf(o.key)!==-1,good=r&&q.answer.indexOf(o.key)!==-1,bad=r&&chosen&&!good;return '<button class="option '+(!r&&chosen?'selected ':'')+(good?'correct ':'')+(bad?'incorrect':'')+'" data-option="'+o.key+'" aria-pressed="'+chosen+'" '+(r?'disabled':'')+'><span class="letter">'+o.key+'</span><span>'+esc(o.text)+'</span>'+(good?'<span class="mark">✓</span>':bad?'<span class="mark">×</span>':'')+'</button>';}).join('')+'</div>';
+      }
+      $('#quiz').innerHTML='<div class="quiz-top"><div><span class="pill">'+names[q.type]+' · 第'+q.number+'题</span>'+(q.supplement?'<span class="pill extra">补充题</span>':'')+'</div><span class="counter"><b>'+(s.index+1)+'</b> / '+s.ids.length+'</span></div><div class="track session-track"><i style="width:'+(answered/s.ids.length*100)+'%"></i></div><h2 class="question">'+esc(q.question)+'</h2><p class="helper">'+(q.type==='multiple'?'选择所有正确选项，再提交核对。':q.type==='blank'?'按题面顺序填写；忽略空格与标点。':'点击一个选项，即时核对答案。')+'</p>'+(q.note?'<p class="source-note">'+esc(q.note)+'</p>':'')+(q.id==='multiple-4'?'<p class="source-note">本题原答案为ABCD，答案可能存在疑问，请向老师确认；网页暂按原题库判分。</p>':'')+body+'<div class="actions">'+(!r&&q.type==='multiple'?'<button class="secondary" data-action="selectAll" id="selectAll" aria-pressed="false">全选</button>':'')+(!r&&(q.type==='multiple'||q.type==='blank')?'<button class="primary" data-action="submit" id="submit">核对答案</button>':'')+(!r?'<button class="secondary" data-action="reveal">想不起来，查看答案</button>':'<button class="secondary" data-action="retry">再答一次</button>')+'</div><div id="feedback">'+(r?feedback(q,r):'')+'</div><div class="quiz-footer"><button class="secondary" data-action="prev" '+(s.index===0?'disabled':'')+'>上一题</button><span class="keys">数字键选择 · Enter 核对 / 下一题</span><button class="'+(r?'primary':'secondary')+'" data-action="next">'+(s.index===s.ids.length-1?'查看本轮结果':r?'下一题':'暂时跳过')+'</button></div><details class="palette"><summary>题目导航 · 本轮已答 '+answered+' / '+s.ids.length+'</summary><div class="dots">'+s.ids.map(function(id,i){var result=s.results[id];return '<button data-jump="'+i+'" class="'+(result?(result.status==='correct'?'done ':'missed '):'')+(i===s.index?'current':'')+'" aria-label="第'+(i+1)+'题">'+(i+1)+'</button>';}).join('')+'</div></details>';
+      if(!r&&q.type==='blank')draft=parts(q).map(function(){return '';});updateSubmit();
+    }
+    function updateSubmit() { var b=$('#submit');if(b)b.disabled=!draft.length||draft.some(function(v){return !String(v).trim();}); }
+    function refreshSelection() {
+      each('[data-option]',function(b){var on=draft.indexOf(b.getAttribute('data-option'))!==-1;toggle(b,'selected',on);b.setAttribute('aria-pressed',String(on));});
+      var button=$('#selectAll'),q=byId[state.session.ids[state.session.index]];
+      if(button){var allSelected=draft.length===q.options.length;button.textContent=allSelected?'取消全选':'全选';button.setAttribute('aria-pressed',String(allSelected));}
+      updateSubmit();
+    }
+    function choose(key) {
+      if(submitted)return;var q=byId[state.session.ids[state.session.index]];
+      if(q.type==='multiple'){
+        if(draft.indexOf(key)===-1)draft.push(key);else draft=draft.filter(function(k){return k!==key;});
+        refreshSelection();
+      }else{draft=[key];submit(false);}
+    }
+    function chime() { if(!state.sound)return;try {var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;if(!audioContext)audioContext=new AC();if(audioContext.resume)audioContext.resume();var osc=audioContext.createOscillator(),gain=audioContext.createGain(),t=audioContext.currentTime;osc.connect(gain);gain.connect(audioContext.destination);osc.frequency.setValueAtTime(660,t);osc.frequency.setValueAtTime(880,t+.12);gain.gain.setValueAtTime(.08,t);gain.gain.exponentialRampToValueAtTime(.001,t+.35);osc.start(t);osc.stop(t+.36);}catch(e){} }
+    function submit(reveal) {
+      if(submitted)return;var s=state.session,q=byId[s.ids[s.index]];
+      if(!reveal&&(!draft.length||draft.some(function(v){return !String(v).trim();})))return;
+      var correct=q.type==='blank'?draft.length===parts(q).length&&draft.every(function(v,i){return normalize(v)===normalize(parts(q)[i]);}):draft.slice().sort().join('')===q.answer.split('').sort().join('');
+      var status=reveal?'peek':correct?'correct':'wrong', r={status:status,value:draft.slice(),at:Date.now()},previous=state.records[q.id];
+      s.results[q.id]=r;state.records[q.id]={status:status,value:r.value.slice(),at:r.at,attempts:(previous&&previous.attempts||0)+1};writeStorage();render();if(status==='correct')chime();
+      try {$('#feedback').scrollIntoView({block:'nearest',behavior:'smooth'});}catch(e){}
+    }
+    function showSummary() {
+      var s=state.session,ids=Object.keys(s.results),correct=ids.filter(function(id){return s.results[id].status==='correct';}).length,missed=ids.length-correct,skipped=s.ids.length-ids.length;
+      $('#quiz').innerHTML='<div class="empty"><p class="eyebrow">每一次练习，都算数</p><h2>这一轮，辛苦了。</h2><div class="summary-numbers">'+correct+' / '+s.ids.length+' 答对</div><p>已作答 '+ids.length+' 道 · 待复习 '+missed+' 道 · 跳过 '+skipped+' 道<br>本轮答对比例 '+Math.round(correct/s.ids.length*100)+'%</p><div class="actions">'+(missed?'<button class="primary" data-action="sessionWrong">复习本轮错题</button>':'')+(skipped?'<button class="primary" data-action="skipped">继续未答题</button>':'')+'<button class="secondary" data-action="restart">再练一轮</button><button class="secondary" data-action="back">返回题目</button></div></div>';
+    }
+    function action(a) {
+      var s=state.session;
+      if(a==='selectAll'){
+        if(submitted||s.finished||!s.ids.length)return;
+        var q=byId[s.ids[s.index]];if(q.type!=='multiple')return;
+        draft=draft.length===q.options.length?[]:q.options.map(function(o){return o.key;});
+        refreshSelection();return;
+      }
+      if(a==='submit'){submit(false);return;}if(a==='reveal'){submit(true);return;}
+      if(a==='retry'){delete s.results[s.ids[s.index]];}
+      if(a==='all'){state.mode='all';newSession();}
+      if(a==='prev')s.index=Math.max(0,s.index-1);
+      if(a==='next'){if(s.index===s.ids.length-1)s.finished=true;else s.index++;}
+      if(a==='restart')newSession();if(a==='back')s.finished=false;
+      if(a==='sessionWrong'||a==='skipped'){state.session={ids:s.ids.filter(function(id){return a==='skipped'?!s.results[id]:s.results[id]&&s.results[id].status!=='correct';}),index:0,results:{},finished:false};}
+      writeStorage();render();
+    }
+    $('#quiz').addEventListener('click',function(e){var b=parent(e.target,'data-action')||parent(e.target,'data-option')||parent(e.target,'data-jump');if(!b||b.disabled)return;var option=b.getAttribute('data-option'),jump=b.getAttribute('data-jump');if(option){choose(option);return;}if(jump!==null){state.session.index=Number(jump);writeStorage();render();return;}action(b.getAttribute('data-action'));});
+    $('#quiz').addEventListener('input',function(e){var index=e.target.getAttribute('data-blank');if(index!==null){draft[Number(index)]=e.target.value;updateSubmit();}});
+    $('#categories').addEventListener('click',function(e){var b=parent(e.target,'data-category');if(b&&b.getAttribute('data-category')!==state.category){state.category=b.getAttribute('data-category');newSession();render();}});
+    each('[data-mode]',function(b){b.addEventListener('click',function(){var mode=b.getAttribute('data-mode');if(mode===state.mode)return;state.mode=mode;newSession();render();});});
+    $('#shuffle').addEventListener('change',function(e){state.shuffle=e.target.checked;newSession();render();});
+    $('#sound').addEventListener('click',function(){state.sound=!state.sound;writeStorage();stats();if(state.sound)chime();});
+    function closeInfo(){var dialog=$('#infoDialog');if(dialog.close)dialog.close();else {dialog.style.display='none';dialog.removeAttribute('open');}}
+    $('#about').addEventListener('click',function(){var dialog=$('#infoDialog');if(dialog.showModal)dialog.showModal();else {dialog.setAttribute('open','');dialog.style.display='block';}});
+    $('#closeInfo').addEventListener('click',closeInfo);$('#gotIt').addEventListener('click',closeInfo);
+    $('#reset').addEventListener('click',function(){if($('.reset-bar'))return;var el=document.createElement('div');el.className='reset-bar';el.innerHTML='确认清空学习记录？<br><button class="primary" id="confirmReset">确认清空</button><button class="secondary" id="cancelReset">取消</button>';$('main').appendChild(el);$('#cancelReset').onclick=function(){el.parentNode.removeChild(el);};$('#confirmReset').onclick=function(){state.records={};state.mode='all';newSession();render();el.parentNode.removeChild(el);};el.scrollIntoView(false);});
+    document.addEventListener('keydown',function(e){if($('#infoDialog').open||e.isComposing||e.ctrlKey||e.altKey||e.metaKey)return;var typing=['INPUT','TEXTAREA'].indexOf(e.target.tagName)!==-1,s=state.session,key=e.key;
+      if(key==='Enter'&&e.target.tagName!=='BUTTON'&&e.target.type!=='checkbox'&&s.ids.length&&!s.finished){e.preventDefault();if(submitted)action('next');else submit(false);}
+      if(!typing&&/^[1-7]$/.test(key)&&!s.finished&&s.ids.length){var q=byId[s.ids[s.index]],o=q.options[Number(key)-1];if(o&&!submitted){e.preventDefault();choose(o.key);}}
+    });
+    render();notice.style.display='none';$('#staticFallback').style.display='none';
+  } catch(e) { reportError(); }
+})();
+</script>
+</body></html>
